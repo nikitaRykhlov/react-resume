@@ -1,0 +1,33 @@
+.education {
+  color: rgb(39, 40, 34);
+
+  .school-title {
+    margin: 5px 0;
+  }
+
+  .field-of-study-title {
+    margin: 5px 0;
+  }
+
+  .degree {
+    margin: 0;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .flex-skills {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  ul {
+
+    li {
+
+    }
+  }
+}

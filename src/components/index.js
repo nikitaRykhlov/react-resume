@@ -1,7 +1,11 @@
-export { default as Navigation } from "./Navigation";
-export { default as Footer } from "./Footer";
-export { default as Main } from "./Main";
-export { default as Expertise } from "./Expertise";
-export { default as Timeline } from "./Timeline";
-export { default as Project } from "./Project";
-export { default as Contact } from "./Contact";
+export {default as Navigation} from "./Navigation";
+export {default as Footer} from "./Footer";
+export {default as Main} from "./Main";
+export {default as About} from "./About";
+export {default as Experience} from "./Experience";
+export {default as Education} from "./Education";
+export {default as LicencesAndCertifications} from "./LicencesAndCertifications";
+export {default as Skills} from "./Skills";
+export {default as HonorsAndAwards} from "./HonorsAndAwards";
+export {default as Blog} from "./Blog";
+export {default as Contacts} from "./Contacts";

@@ -1,0 +1,44 @@
+.chip {
+  font-size: 0.8rem !important;
+  height: 25px !important;
+
+  &.white {
+    color: rgb(39, 40, 34) !important;
+    background-color: white !important;
+
+    span {
+      color: rgb(39, 40, 34);
+    }
+  }
+
+  &.black {
+    color: white !important;
+    background-color: rgb(39, 40, 34) !important;
+
+    span {
+      color: white;
+    }
+  }
+
+  span {
+    font-family: 'Courier Prime', monospace;
+  }
+
+  svg {
+    height: 15px !important;
+  }
+}
+
+.MuiChip-root {
+  margin-right: 0.5em;
+}
+
+.MuiChip-outlined {
+  background-color: #e0e0e0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+.MuiChip-outlined span {
+  color: rgb(39, 40, 34);
+}

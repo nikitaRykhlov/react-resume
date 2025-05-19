@@ -1,0 +1,18 @@
+.contacts-container {
+  h2 {
+    text-align: center;
+  }
+
+  .contacts-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .social-icon {
+      font-size: 2em;
+    }
+  }
+}
+

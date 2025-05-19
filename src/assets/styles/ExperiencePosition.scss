@@ -1,0 +1,37 @@
+.position {
+  color: rgb(39, 40, 34);
+
+  .company-title {
+    margin: 5px 0;
+  }
+
+  .position-title {
+    margin: 5px 0;
+  }
+
+  .location-title {
+    margin: 0;
+  }
+
+  .list-title {
+    font-weight: bold;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .flex-skills {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  ul {
+
+    li {
+
+    }
+  }
+}

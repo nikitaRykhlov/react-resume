@@ -1,0 +1,15 @@
+.blog-container {
+  .blog-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .blog-icon {
+      color: inherit;
+      font-size: 2em;
+    }
+  }
+}
+

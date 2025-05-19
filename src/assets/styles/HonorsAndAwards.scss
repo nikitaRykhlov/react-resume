@@ -1,0 +1,49 @@
+.honors-and-awards-container {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  svg {
+    color: white;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.honors-and-awards-container .honors-and-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+.honors-and-awards-container .honors-and-awards-grid .honor-or-award {
+  align-items: center;
+  text-align: left;
+}
+
+@media screen {
+  @media (max-width: 1170px) {
+    .honors-and-awards-container {
+      display: block;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .honors-and-awards-container .honors-and-awards-grid {
+      display: initial;
+    }
+
+    .honors-and-awards-container .honors-and-awards-grid .honor-or-award {
+      padding-bottom: 5%;
+    }
+  }
+
+  @media (max-width: 567px) {
+    .honors-and-awards {
+      font-size: 12px;
+    }
+  }
+}
