@@ -25,7 +25,7 @@ function Contacts() {
                 </div>
 
                 <div className="contacts-row">
-                    <p>Time zone: UTC+03:00</p>
+                    <p>Time zone: UTC+04:00</p>
                 </div>
 
                 <div className="contacts-row">
