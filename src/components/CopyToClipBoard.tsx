@@ -3,6 +3,7 @@ import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import copy from 'copy-to-clipboard';
 
 interface CopyToClipboardProps {
     content: string;
@@ -13,10 +14,10 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({content}) => {
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(content);
+            copy(content);
             setOpen(true);
         } catch (err) {
-            console.error('failed to copy text:', err);
+            console.error('Failed to copy text:', err);
         }
     };
 
