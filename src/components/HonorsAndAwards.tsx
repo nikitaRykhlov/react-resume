@@ -15,7 +15,7 @@ function HonorsAndAwards() {
                         <h3>Sales Growth Excellence Award</h3>
                         <h4>Associated with <a href="https://www.linkedin.com/company/kuper-ru" target="_blank"
                                                rel="noreferrer">Kuper</a></h4>
-                        <p>Achieved a 427% increase in B2B sales volume within six months by launching a scalable
+                        <p>Achieved a <b>427%</b> increase in B2B sales volume within six months by launching a scalable
                             wholesale orders platform powered by Redis and S3. The platform's robust architecture and
                             caching mechanisms enabled seamless handling of high transaction volumes.</p>
                     </div>
@@ -25,7 +25,7 @@ function HonorsAndAwards() {
                         <h3>Code Quality Champion Award</h3>
                         <h4>Associated with <a href="https://www.linkedin.com/company/elmabpm" target="_blank"
                                                rel="noreferrer">ELMA365</a></h4>
-                        <p>Achieved 97% test coverage through rigorous Test-Driven Development (TDD) practices,
+                        <p>Achieved <b>97%</b> test coverage through rigorous Test-Driven Development (TDD) practices,
                             minimizing runtime errors and enhancing system stability. Demonstrated expertise in unit,
                             integration, and end-to-end testing to ensure maintainable and reliable code.</p>
                     </div>
@@ -35,7 +35,7 @@ function HonorsAndAwards() {
                         <h3>Operational Efficiency Excellence Award</h3>
                         <h4>Associated with <a href="https://www.linkedin.com/company/elmabpm" target="_blank"
                                                rel="noreferrer">ELMA365</a></h4>
-                        <p>Recognized for reducing document generation time by 25.5% , significantly improving
+                        <p>Recognized for reducing document generation time by <b>25.5%</b>, significantly improving
                             operational efficiency. Optimized backend workflows and implemented performance enhancements
                             using Golang and microservices architecture.</p>
                     </div>
