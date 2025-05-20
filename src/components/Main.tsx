@@ -38,7 +38,8 @@ function Main() {
                             className="social-icon" icon={faMedium}/></a>
                     </div>
                     <h1>Nikita Rykhlov</h1>
-                    <p className="current-position">Back End Developer <span className="underline">5 years+</span></p>
+                    <p className="current-position">Back End Developer</p>
+                    <p className="current-position underline">5 years+</p>
                     <div className="flex-chips">
                         {MainSkills.map((label, index) => (
                             <Chip key={index} label={label}/>

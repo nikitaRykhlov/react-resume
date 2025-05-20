@@ -1,9 +1,9 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/styles/ExperiencePosition.scss'
 import Expandable from "../Expandable";
 import {Chip} from "../ui";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import Button from "@mui/material/Button";
 
 
 const skills = [
@@ -26,6 +26,14 @@ function ELMA365() {
             <h3 className="company-title">ELMA365</h3>
             <h4 className="position-title">Senior Full Stack Developer</h4>
             <h5 className="location-title">Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates - Remote</h5>
+
+            <Button
+                href={"https://www.linkedin.com/company/elmabpm/"}
+                target="_brank"
+                rel="noreferrer"
+                color="inherit"
+                startIcon={<LinkedIn/>}
+            >LinkedIn</Button>
 
             <p className="list-title">Key Achievements:</p>
             <ul>
@@ -75,7 +83,8 @@ function ELMA365() {
                 <p className="list-title">Technical Contributions:</p>
                 <ul>
                     <li>
-                        Implemented Kubernetes for container orchestration, ensuring fault tolerance and scalability.
+                        Implemented Kubernetes for container orchestration, ensuring fault tolerance and
+                        scalability.
                     </li>
                     <li>
                         Integrated Redis for caching and S3 for storage, boosting system performance.

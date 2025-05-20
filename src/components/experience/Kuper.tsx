@@ -1,9 +1,9 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/styles/ExperiencePosition.scss'
 import Expandable from "../Expandable";
 import {Chip} from "../ui";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import Button from "@mui/material/Button";
 
 
 const skills = [
@@ -32,6 +32,14 @@ function Kuper() {
             <h4 className="position-title">Senior Back End Developer</h4>
             <h5 className="location-title">Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates - Remote</h5>
 
+            <Button
+                href={"https://www.linkedin.com/company/kuper-ru/"}
+                target="_brank"
+                rel="noreferrer"
+                color="inherit"
+                startIcon={<LinkedIn/>}
+            >LinkedIn</Button>
+
             <p className="list-title">Key Achievements:</p>
             <ul>
                 <li>
@@ -40,7 +48,8 @@ function Kuper() {
                     PostgreSQL, and Kafka.
                 </li>
                 <li>
-                    Increased B2B sales volume by <span className="bold">427%</span> within six months by launching a
+                    Increased B2B sales volume by <span className="bold">427%</span> within six months by launching
+                    a
                     scalable wholesale orders
                     platform with Redis and S3.
                 </li>

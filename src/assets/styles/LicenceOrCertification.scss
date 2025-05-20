@@ -1,8 +1,16 @@
 .licence-or-certification {
   color: rgb(39, 40, 34);
 
+  .title-wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: start;
+  }
+
   .title {
     margin: 5px 0;
+    color: inherit;
   }
 
   .issuer {
@@ -10,7 +18,7 @@
   }
 
   .flex-skills {
-    margin: 5px 0;
+    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;

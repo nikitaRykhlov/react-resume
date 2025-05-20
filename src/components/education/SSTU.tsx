@@ -1,6 +1,4 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/styles/EducationSchool.scss'
 import {Chip} from "../ui";
 

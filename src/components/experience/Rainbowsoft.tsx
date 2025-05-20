@@ -1,9 +1,9 @@
 import React from "react";
-import '@fortawesome/free-regular-svg-icons'
-import 'react-vertical-timeline-component/style.min.css';
 import '../../assets/styles/ExperiencePosition.scss'
 import Expandable from "../Expandable";
 import {Chip} from "../ui";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import Button from "@mui/material/Button";
 
 
 const skills = [
@@ -28,6 +28,14 @@ function Rainbowsoft() {
             <h4 className="position-title">Middle Full Stack Developer</h4>
             <h5 className="location-title">Tbilisi, Georgia - Remote</h5>
 
+            <Button
+                href={"https://www.linkedin.com/company/%D0%BD%D0%BF%D0%BE-rbs-rainbowsoft-/"}
+                target="_brank"
+                rel="noreferrer"
+                color="inherit"
+                startIcon={<LinkedIn/>}
+            >LinkedIn</Button>
+
             <p className="list-title">Key Achievements:</p>
             <ul>
                 <li>
@@ -35,14 +43,16 @@ function Rainbowsoft() {
                     projects.
                 </li>
                 <li>
-                    Built a remote control system using Golang, WebSockets, and React.js, improving device management
+                    Built a remote control system using Golang, WebSockets, and React.js, improving device
+                    management
                     efficiency.
                 </li>
                 <li>
                     Simplified deployment with Docker, reducing maintenance complexity.
                 </li>
                 <li>
-                    Contributed to the SPECTR Traffic Rules system, enhancing its usability for teaching traffic rules.
+                    Contributed to the SPECTR Traffic Rules system, enhancing its usability for teaching traffic
+                    rules.
                 </li>
                 <li>
                     Optimized RepkaPi setup by testing OS options and selecting optimal software.

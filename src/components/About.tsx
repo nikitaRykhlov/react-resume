@@ -7,7 +7,7 @@ function About() {
             <div className="items-container">
                 <h2>About</h2>
                 <p>
-                    I have over 5 years of experience in software development, focusing on building robust and scalable
+                    I have <b>over 5 years</b> of experience in software development, focusing on building robust and scalable
                     solutions that drive value across various industries. My expertise lies in designing and maintaining
                     high-load distributed systems, where performance, reliability, and fault tolerance are essential
                     under intense workloads. I emphasize creating architectures that are not only scalable and flexible

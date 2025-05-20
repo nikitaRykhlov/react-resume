@@ -1,6 +1,10 @@
 .position {
   color: rgb(39, 40, 34);
 
+  svg {
+    color: inherit;
+  }
+
   .company-title {
     margin: 5px 0;
   }
@@ -10,7 +14,7 @@
   }
 
   .location-title {
-    margin: 0;
+    margin: 5px 0;
   }
 
   .list-title {
