@@ -5,6 +5,9 @@ import CopyToClipboard from "./CopyToClipBoard";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
 
 function Contacts() {
     const email = "nikita_rykhlov@outlook.com"
@@ -29,12 +32,24 @@ function Contacts() {
                 </div>
 
                 <div className="contacts-row">
-                    <a href="https://github.com/nikitaRykhlov" target="_blank" rel="noreferrer"><GitHubIcon
-                        className="social-icon"/></a>
-                    <a href="https://www.linkedin.com/in/nikita-rykhlov/" target="_blank" rel="noreferrer"><LinkedInIcon
-                        className="social-icon"/></a>
-                    <a href="https://wa.me/995599390961" target="_blank" rel="noreferrer"><WhatsAppIcon
-                        className="social-icon"/></a>
+                    <a href="https://www.linkedin.com/in/nikita-rykhlov/" target="_blank" rel="noreferrer">
+                        <LinkedInIcon className="social-icon"/>
+                    </a>
+                    <a href="https://github.com/nikitaRykhlov" target="_blank" rel="noreferrer">
+                        <GitHubIcon className="social-icon"/>
+                    </a>
+                    <a href="https://t.me/nikitaRykhlov" target="_blank" rel="noreferrer">
+                        <TelegramIcon className="social-icon"/>
+                    </a>
+                    <a href="https://wa.me/995599390961" target="_blank" rel="noreferrer">
+                        <WhatsAppIcon className="social-icon"/>
+                    </a>
+                    <a href="https://www.facebook.com/nikitaRykhlovDev/" target="_blank" rel="noreferrer">
+                        <FacebookIcon className="social-icon"/>
+                    </a>
+                    <a href="https://x.com/NikitaRykhlov" target="_blank" rel="noreferrer">
+                        <XIcon className="social-icon"/>
+                    </a>
                 </div>
             </div>
         </div>

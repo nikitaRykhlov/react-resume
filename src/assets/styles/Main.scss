@@ -49,6 +49,7 @@
     flex-direction: row;
     gap: 10px;
     color: white;
+    flex-wrap: wrap;
 
     svg {
       font-size: 1.8em;
@@ -162,6 +163,7 @@
       flex-direction: row;
       gap: 10px;
       color: white;
+      flex-wrap: wrap;
 
       svg {
         font-size: 1.8em;
