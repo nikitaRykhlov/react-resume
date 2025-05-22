@@ -7,5 +7,5 @@ export {default as Education} from "./Education";
 export {default as LicencesAndCertifications} from "./LicencesAndCertifications";
 export {default as Skills} from "./Skills";
 export {default as HonorsAndAwards} from "./HonorsAndAwards";
-export {default as Blog} from "./Blog";
+export {default as PersonalBrand} from "./PersonalBrand";
 export {default as Contacts} from "./Contacts";

@@ -10,7 +10,7 @@ import {
     Footer,
     HonorsAndAwards,
     Contacts,
-    Blog,
+    PersonalBrand,
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
@@ -41,7 +41,7 @@ function App() {
                 <LicencesAndCertifications/>
                 <Skills/>
                 <HonorsAndAwards/>
-                <Blog/>
+                <PersonalBrand/>
                 <Contacts/>
             </FadeIn>
             <Footer/>
