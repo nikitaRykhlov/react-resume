@@ -22,8 +22,9 @@ function Main() {
             <div className="about-section">
                 <div className="image-wrapper">
                     <img
-                        src="https://media.licdn.com/dms/image/v2/D4E35AQGfth8as0oegw/profile-framedphoto-shrink_200_200/B4EZbOKJKyHwAk-/0/1747215488132?e=1748181600&v=beta&t=rWHzALraJX2GhbugXEFIrZsNePqGl14LNOO6Ck475nk"
-                        alt="Avatar"/>
+                        src="https://nikita-rykhlov.tech/photo.png"
+                        alt="Avatar"
+                    />
                 </div>
                 <div className="content">
                     <div className="social_icons">
