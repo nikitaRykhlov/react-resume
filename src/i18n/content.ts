@@ -4,7 +4,7 @@
 export type IconId =
   | 'github' | 'linkedin' | 'telegram' | 'whatsapp' | 'facebook' | 'x'
   | 'devto' | 'medium' | 'mail' | 'copy' | 'check' | 'external'
-  | 'sun' | 'moon' | 'arrow' | 'down';
+  | 'sun' | 'moon' | 'arrow' | 'down' | 'clock';
 
 export interface Social {
   href: string;

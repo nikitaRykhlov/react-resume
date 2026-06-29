@@ -544,9 +544,32 @@ main { position: relative; z-index: 2; }
   transition: transform .25s ease;
   .exp-card--open & { transform: rotate(180deg); }
 }
+/* Smoothly animates height via grid-template-rows 0fr -> 1fr (no fixed
+   max-height guesswork). The inner clips overflow so content never spills
+   while collapsed. */
+.exp-card__body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .46s cubic-bezier(.4, 0, .2, 1);
+  .exp-card--open & { grid-template-rows: 1fr; }
+}
+.exp-card__body-inner {
+  overflow: hidden;
+  min-height: 0;
+}
 .exp-card__body {
   padding: 0 clamp(20px, 3vw, 30px) clamp(22px, 3vw, 32px);
   border-top: 1px solid var(--border-subtle);
+  /* Fade the contents in/out a touch behind the height so the reveal feels
+     layered rather than a hard wipe. */
+  opacity: 0;
+  transition: opacity .3s ease .04s;
+  .exp-card--open & { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-card__body-wrap { transition: none; }
+  .exp-card__body { transition: none; }
 }
 .exp-hl-list {
   display: flex;
