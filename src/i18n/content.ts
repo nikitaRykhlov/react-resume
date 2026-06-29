@@ -88,6 +88,7 @@ export const socials: Social[] = [
   { href: 'https://x.com/NikitaRykhlov', label: 'X', icon: 'x' },
 ];
 
+const tabbySkills = ['Golang', 'ElasticSearch', 'Microservices', 'PostgreSQL', 'GCP', 'GCS', 'Pub/Sub', 'Redis', 'Kubernetes', 'Software Architecture', 'gRPC', 'DDD', 'High Availability', 'Distributed Systems', 'TDD'];
 const kuperSkills = ['Microservices', 'PostgreSQL', 'Kubernetes', 'S3', 'Redis', 'Kafka', 'Scalability', 'Software Architecture', 'gRPC', 'DDD', 'Golang', 'High Availability', 'Distributed Systems', 'TDD', 'GitLab'];
 const elmaSkills = ['Golang', 'Kubernetes', 'Angular', 'Distributed Systems', 'High Availability', 'Scalability', 'Microservices', 'S3', 'Redis', 'TDD', 'GitLab'];
 const rbsSkills = ['Golang', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSockets', 'React.js', 'Docker', 'PHP', 'Full Stack'];
@@ -97,10 +98,10 @@ const en: Content = {
   ui: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Honors & Awards', education: 'Education', certifications: 'Certifications', writing: 'Writing', contact: 'Contact', responsibilities: 'Responsibilities', team: 'Team', email: 'Email', phone: 'Phone', timezone: 'Time zone' },
   nav: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Awards', contact: 'Contact' },
   hero: {
-    status: 'Available for new projects', role: 'Back End Developer', first: 'Nikita', last: 'Rykhlov',
+    status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
     tagline: 'I design and maintain high-load distributed systems where performance, reliability and fault tolerance come first.',
     years: '5+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
-    location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Kafka', 'PostgreSQL'],
+    location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'ElasticSearch', 'PostgreSQL'],
   },
   about: {
     title: 'I build systems meant to last.',
@@ -112,14 +113,29 @@ const en: Content = {
   },
   metrics: [
     { value: '5+', label: 'years of experience' },
-    { value: '3', label: 'product companies' },
-    { value: '99.9%', label: 'uptime maintained' },
-    { value: '427%', label: 'B2B sales growth' },
+    { value: '4', label: 'product companies' },
+    { value: '99.95%', label: 'uptime maintained' },
+    { value: '88.1%', label: 'ad coverage built' },
   ],
   experience: {
     items: [
       {
-        company: 'Kuper', role: 'Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Dec 2023 — Present', team: '5',
+        company: 'Tabby', role: 'Tech Lead · Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Jul 2025 — Present', team: '7',
+        highlights: [
+          { value: '88.1%', text: 'ad coverage across product screens (from 24.3%) via a universal source blender for ranked feeds' },
+          { value: '~87%', text: 'faster update delivery to users — from 13–16 hours down to 2 — by decoupling the pipeline and adding an orchestrator' },
+          { value: '~38%', text: 'lower search latency by migrating the ElasticSearch cluster to geo-sharding for a new-country launch' },
+          { value: '99.95%', text: 'ElasticSearch cluster availability maintained throughout the migration' },
+        ],
+        details: [
+          'Acted as Feature/Tech Lead across initiatives — owned architecture, delivery and hands-on development end to end.',
+          'Designed and built the search and recommendation engines, including merchant suggest and result limiting.',
+          'Led the ElasticSearch geo-sharding migration for a new market, with HA/failover validation and recovery docs.',
+          'Built a per-A/B-group config system and dynamic loading of ML embeddings and CTR models from GCS without releases.',
+        ], skills: tabbySkills,
+      },
+      {
+        company: 'Kuper', role: 'Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Dec 2023 — Jun 2025', team: '5',
         highlights: [
           { value: '34.5%', text: 'faster deployments by extracting B2B logic into microservices (Golang, PostgreSQL, Kafka)' },
           { value: '427%', text: 'B2B sales growth in six months via a scalable wholesale orders platform' },
@@ -166,10 +182,11 @@ const en: Content = {
     title: 'A full-stack toolkit, with a back-end core.',
     items: [
       { name: 'Languages', desc: 'English and Russian — comfortable with professional communication, technical writing and documentation.', chips: ['English', 'Russian'] },
-      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
+      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'ElasticSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
       { name: 'Front End', desc: 'User interfaces with clean structure, responsive design and a smooth experience; complex frontend logic integrated with backends.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
       { name: 'Development', desc: 'Architecting complex systems with maintainability, scalability and clean-code practices at the core.', chips: ['Software Architecture', 'DDD', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps & Automation', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and managing infrastructure with a focus on automation and reliability.', chips: ['Kubernetes', 'Docker', 'Helm', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'DevOps & Cloud', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and running infrastructure on the cloud with a focus on automation and reliability.', chips: ['Kubernetes', 'Docker', 'Helm', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'AI-Assisted Development', desc: 'Speeding up prototyping, spec-driven workflows and delivery with modern AI development tooling.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
       { name: 'Other', desc: 'Project management, system modelling and design collaboration — task tracking, architecture visualisation and API testing.', chips: ['Jira', 'UML', 'BPMN', 'C4 Model', 'Figma', 'Postman'] },
     ],
   },
@@ -211,10 +228,10 @@ const ru: Content = {
   ui: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', education: 'Образование', certifications: 'Сертификаты', writing: 'Блог', contact: 'Контакты', responsibilities: 'Обязанности', team: 'Команда', email: 'Почта', phone: 'Телефон', timezone: 'Часовой пояс' },
   nav: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', contact: 'Контакты' },
   hero: {
-    status: 'Открыт к новым проектам', role: 'Back End разработчик', first: 'Никита', last: 'Рыхлов',
+    status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
     tagline: 'Проектирую и поддерживаю высоконагруженные распределённые системы, где на первом месте производительность, надёжность и отказоустойчивость.',
     years: '5+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
-    location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Kafka', 'PostgreSQL'],
+    location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'ElasticSearch', 'PostgreSQL'],
   },
   about: {
     title: 'Создаю системы, которые живут долго.',
@@ -226,14 +243,29 @@ const ru: Content = {
   },
   metrics: [
     { value: '5+', label: 'лет опыта' },
-    { value: '3', label: 'продуктовые компании' },
-    { value: '99.9%', label: 'аптайм систем' },
-    { value: '427%', label: 'рост B2B-продаж' },
+    { value: '4', label: 'продуктовые компании' },
+    { value: '99.95%', label: 'аптайм систем' },
+    { value: '88.1%', label: 'покрытие рекламой' },
   ],
   experience: {
     items: [
       {
-        company: 'Kuper', role: 'Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Дек 2023 — наст. время', team: '5',
+        company: 'Tabby', role: 'Tech Lead · Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Июл 2025 — наст. время', team: '7',
+        highlights: [
+          { value: '88.1%', text: 'покрытие рекламой по экранам продукта (с 24.3%) за счёт универсального блендера источников для ранжированной выдачи' },
+          { value: '~87%', text: 'быстрее доставка обновлений до пользователя — с 13–16 часов до 2 — за счёт decoupling пайплайна и оркестратора' },
+          { value: '~38%', text: 'ниже latency поиска благодаря миграции кластера ElasticSearch на geo-sharding для запуска в новой стране' },
+          { value: '99.95%', text: 'доступность кластера ElasticSearch в ходе всей миграции' },
+        ],
+        details: [
+          'Был Feature/Tech Lead в нескольких инициативах — отвечал за архитектуру, доставку и непосредственную разработку.',
+          'Спроектировал и построил движки поиска и рекомендаций, включая саджест мерчантов и лимитирование результатов.',
+          'Руководил миграцией ElasticSearch на geo-sharding для нового рынка с проверкой HA/отказоустойчивости.',
+          'Сделал конфиги per-A/B-группу и динамическую загрузку ML-эмбеддингов и CTR-моделей из GCS без релизов.',
+        ], skills: tabbySkills,
+      },
+      {
+        company: 'Kuper', role: 'Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Дек 2023 — Июн 2025', team: '5',
         highlights: [
           { value: '34.5%', text: 'быстрее деплой за счёт выделения B2B-логики в микросервисы (Golang, PostgreSQL, Kafka)' },
           { value: '427%', text: 'рост B2B-продаж за полгода благодаря масштабируемой платформе оптовых заказов' },
@@ -280,10 +312,11 @@ const ru: Content = {
     title: 'Full-stack-набор с backend-ядром.',
     items: [
       { name: 'Языки', desc: 'Английский и русский — свободно для профессионального общения, технической переписки и документации.', chips: ['Английский', 'Русский'] },
-      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
+      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'ElasticSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
       { name: 'Front End', desc: 'Интерфейсы с чистой структурой, адаптивной вёрсткой и плавным UX; сложная frontend-логика в связке с backend.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
       { name: 'Разработка', desc: 'Проектирование сложных систем с упором на поддерживаемость, масштабируемость и чистый код.', chips: ['Software Architecture', 'DDD', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps и автоматизация', desc: 'CI/CD-пайплайны, контейнеризация и управление инфраструктурой с упором на автоматизацию и надёжность.', chips: ['Kubernetes', 'Docker', 'Helm', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'DevOps и облако', desc: 'CI/CD-пайплайны, контейнеризация и инфраструктура в облаке с упором на автоматизацию и надёжность.', chips: ['Kubernetes', 'Docker', 'Helm', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'AI-разработка', desc: 'Ускоряю прототипирование, spec-driven процессы и доставку с помощью современных AI-инструментов разработки.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
       { name: 'Прочее', desc: 'Управление проектами, моделирование систем и работа с дизайном — трекинг задач, визуализация архитектуры и тестирование API.', chips: ['Jira', 'UML', 'BPMN', 'C4 Model', 'Figma', 'Postman'] },
     ],
   },
