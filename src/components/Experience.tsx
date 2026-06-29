@@ -84,7 +84,7 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
                         <span key={sk} className="chip">{sk}</span>
                       ))}
                     </div>
-                    <div className="exp__team">{t.ui.team}: {item.team}</div>
+                    <div className="exp__team">{t.ui.team}: {item.unit} · {item.team}</div>
                   </div>
                 </div>
               </div>

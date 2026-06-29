@@ -22,6 +22,7 @@ export interface ExperienceItem {
   role: string;
   location: string;
   period: string;
+  unit: string;
   team: string;
   highlights: Highlight[];
   details: string[];
@@ -120,7 +121,7 @@ const en: Content = {
   experience: {
     items: [
       {
-        company: 'Tabby', role: 'Tech Lead · Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Jul 2025 — Present', team: '7',
+        company: 'Tabby', role: 'Tech Lead · Feature Lead · Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Jul 2025 — Present', unit: 'Search & Recommendations', team: '7',
         highlights: [
           { value: '88.1%', text: 'ad coverage across product screens (from 24.3%) via a universal source blender for ranked feeds' },
           { value: '~87%', text: 'faster update delivery to users — from 13–16 hours down to 2 — by decoupling the pipeline and adding an orchestrator' },
@@ -135,7 +136,7 @@ const en: Content = {
         ], skills: tabbySkills,
       },
       {
-        company: 'Kuper', role: 'Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Dec 2023 — Jun 2025', team: '5',
+        company: 'Kuper', role: 'Senior Back End Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Dec 2023 — Jun 2025', unit: 'B2B · Growth & Engagement', team: '5',
         highlights: [
           { value: '34.5%', text: 'faster deployments by extracting B2B logic into microservices (Golang, PostgreSQL, Kafka)' },
           { value: '427%', text: 'B2B sales growth in six months via a scalable wholesale orders platform' },
@@ -150,7 +151,7 @@ const en: Content = {
         ], skills: kuperSkills,
       },
       {
-        company: 'ELMA365', role: 'Senior Full Stack Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Nov 2022 — Dec 2023', team: '6',
+        company: 'ELMA365', role: 'Senior Full Stack Developer', location: 'Abu Dhabi, UAE · Remote', period: 'Nov 2022 — Dec 2023', unit: 'Document Management', team: '6',
         highlights: [
           { value: '25.5%', text: 'faster document generation, improving operational efficiency' },
           { value: '97%', text: 'test coverage, reducing runtime errors and improving stability' },
@@ -163,7 +164,7 @@ const en: Content = {
         ], skills: elmaSkills,
       },
       {
-        company: 'Rainbowsoft', role: 'Middle Full Stack Developer', location: 'Tbilisi, Georgia · Remote', period: 'Oct 2020 — Nov 2022', team: '8',
+        company: 'Rainbowsoft', role: 'Middle Full Stack Developer', location: 'Tbilisi, Georgia · Remote', period: 'Oct 2020 — Nov 2022', unit: 'Research & Development', team: '8',
         highlights: [
           { value: 'SDK', text: 'built an SDK for microcomponent management, integrated into robotics projects' },
           { value: 'RC', text: 'created a remote-control system with Golang, WebSockets and React.js' },
@@ -250,7 +251,7 @@ const ru: Content = {
   experience: {
     items: [
       {
-        company: 'Tabby', role: 'Tech Lead · Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Июл 2025 — наст. время', team: '7',
+        company: 'Tabby', role: 'Tech Lead · Feature Lead · Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Июл 2025 — наст. время', unit: 'Поиск и рекомендации', team: '7',
         highlights: [
           { value: '88.1%', text: 'покрытие рекламой по экранам продукта (с 24.3%) за счёт универсального блендера источников для ранжированной выдачи' },
           { value: '~87%', text: 'быстрее доставка обновлений до пользователя — с 13–16 часов до 2 — за счёт decoupling пайплайна и оркестратора' },
@@ -265,7 +266,7 @@ const ru: Content = {
         ], skills: tabbySkills,
       },
       {
-        company: 'Kuper', role: 'Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Дек 2023 — Июн 2025', team: '5',
+        company: 'Kuper', role: 'Senior Back End разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Дек 2023 — Июн 2025', unit: 'B2B · Рост и вовлечение', team: '5',
         highlights: [
           { value: '34.5%', text: 'быстрее деплой за счёт выделения B2B-логики в микросервисы (Golang, PostgreSQL, Kafka)' },
           { value: '427%', text: 'рост B2B-продаж за полгода благодаря масштабируемой платформе оптовых заказов' },
@@ -280,7 +281,7 @@ const ru: Content = {
         ], skills: kuperSkills,
       },
       {
-        company: 'ELMA365', role: 'Senior Full Stack разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Ноя 2022 — Дек 2023', team: '6',
+        company: 'ELMA365', role: 'Senior Full Stack разработчик', location: 'Абу-Даби, ОАЭ · Удалённо', period: 'Ноя 2022 — Дек 2023', unit: 'Документооборот', team: '6',
         highlights: [
           { value: '25.5%', text: 'быстрее генерация документов — выше операционная эффективность' },
           { value: '97%', text: 'покрытие тестами — меньше ошибок и выше стабильность' },
@@ -293,7 +294,7 @@ const ru: Content = {
         ], skills: elmaSkills,
       },
       {
-        company: 'Rainbowsoft', role: 'Middle Full Stack разработчик', location: 'Тбилиси, Грузия · Удалённо', period: 'Окт 2020 — Ноя 2022', team: '8',
+        company: 'Rainbowsoft', role: 'Middle Full Stack разработчик', location: 'Тбилиси, Грузия · Удалённо', period: 'Окт 2020 — Ноя 2022', unit: 'Research & Development', team: '8',
         highlights: [
           { value: 'SDK', text: 'разработал SDK для управления микрокомпонентами для робототехнических проектов' },
           { value: 'RC', text: 'создал систему удалённого управления на Golang, WebSockets и React.js' },
