@@ -1,52 +1,39 @@
-import React, {useState, useEffect} from "react";
-import {
-    Main,
-    About,
-    Skills,
-    Experience,
-    Education,
-    LicencesAndCertifications,
-    Navigation,
-    Footer,
-    HonorsAndAwards,
-    Contacts,
-    PersonalBrand,
-} from "./components";
-import FadeIn from './components/FadeIn';
-import './index.scss';
+import React from 'react';
+import { content, socials } from './i18n/content';
+import { usePrefs } from './hooks/usePrefs';
+import IconSprite from './components/IconSprite';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Awards from './components/Awards';
+import Education from './components/Education';
+import Writing from './components/Writing';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-    const [mode, setMode] = useState<string>('dark');
+  const { theme, lang, setLang, toggleTheme } = usePrefs();
+  const t = content[lang];
 
-    const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
-    }
-
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    }, []);
-
-    return (
-        <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-            <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-            <FadeIn transitionDuration={700}>
-                <Main/>
-                <About/>
-                <Experience/>
-                <Education/>
-                <LicencesAndCertifications/>
-                <Skills/>
-                <HonorsAndAwards/>
-                <PersonalBrand/>
-                <Contacts/>
-            </FadeIn>
-            <Footer/>
-        </div>
-    );
+  return (
+    <div className="app">
+      <IconSprite />
+      <Nav t={t} lang={lang} theme={theme} setLang={setLang} toggleTheme={toggleTheme} />
+      <Hero t={t} theme={theme} socials={socials} />
+      <main>
+        <About t={t} />
+        <Experience t={t} />
+        <Skills t={t} />
+        <Awards t={t} />
+        <Education t={t} />
+        <Writing t={t} />
+        <Contact t={t} socials={socials} />
+        <Footer t={t} />
+      </main>
+    </div>
+  );
 }
 
 export default App;
