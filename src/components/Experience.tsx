@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import type { Content } from '../i18n/content';
 import Eyebrow from './Eyebrow';
 import Reveal from './Reveal';
@@ -7,29 +7,9 @@ import Icon from './Icon';
 const Experience: React.FC<{ t: Content }> = ({ t }) => {
   // First card open by default; -1 = all closed.
   const [openExp, setOpenExp] = useState(0);
-  // Header of each card — used as the anchor we keep visually fixed while the
-  // expand/collapse animation reflows everything around it.
-  const headerRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const toggle = (i: number) => {
-    const anchor = headerRefs.current[i];
     setOpenExp((cur) => (cur === i ? -1 : i));
-    if (!anchor) return;
-
-    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    const startTop = anchor.getBoundingClientRect().top;
-
-    // Pin the clicked header to its current viewport position: every frame we
-    // scroll by however much it drifted, so a card collapsing above it can't
-    // make the page jump. The view shifts with the card, expansion stays smooth.
-    const start = performance.now();
-    const duration = reduce ? 0 : 460;
-    const pin = (now: number) => {
-      const delta = anchor.getBoundingClientRect().top - startTop;
-      if (Math.abs(delta) >= 0.5) window.scrollBy(0, delta);
-      if (now - start < duration) requestAnimationFrame(pin);
-    };
-    requestAnimationFrame(pin);
   };
 
   return (
@@ -41,7 +21,6 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
           return (
             <Reveal key={item.company} className={`exp-card${open ? ' exp-card--open' : ''}`}>
               <button
-                ref={(el) => { headerRefs.current[i] = el; }}
                 className="exp-card__header"
                 aria-expanded={open}
                 onClick={() => toggle(i)}
