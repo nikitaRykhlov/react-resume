@@ -196,7 +196,7 @@ const en: Content = {
       { label: 'dev.to', href: 'https://dev.to/nikita_rykhlov', icon: 'devto' },
       { label: 'Medium', href: 'https://medium.com/@nikita_rykhlov', icon: 'medium' },
       { label: 'Facebook', href: 'https://www.facebook.com/groups/nikitarykhlov', icon: 'facebook' },
-      { label: 'Telegram', href: 'http://t.me/nikitaRykhlovBlog', icon: 'telegram' },
+      { label: 'Telegram', href: 'https://t.me/nikitaRykhlovBlog', icon: 'telegram' },
     ],
   },
   contact: {
@@ -310,7 +310,7 @@ const ru: Content = {
       { label: 'dev.to', href: 'https://dev.to/nikita_rykhlov', icon: 'devto' },
       { label: 'Medium', href: 'https://medium.com/@nikita_rykhlov', icon: 'medium' },
       { label: 'Facebook', href: 'https://www.facebook.com/groups/nikitarykhlov', icon: 'facebook' },
-      { label: 'Telegram', href: 'http://t.me/nikitaRykhlovBlog', icon: 'telegram' },
+      { label: 'Telegram', href: 'https://t.me/nikitaRykhlovBlog', icon: 'telegram' },
     ],
   },
   contact: {
