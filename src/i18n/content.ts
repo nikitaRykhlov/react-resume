@@ -201,7 +201,7 @@ const en: Content = {
   },
   contact: {
     title: 'Let’s build something that flows.',
-    subtitle: 'Open to senior back-end and architecture roles. The fastest way to reach me is email or Telegram.',
+    subtitle: 'Open to senior back-end and architecture roles. The fastest way to reach me is email or WhatsApp.',
     email: 'nikita_rykhlov@outlook.com', phone: '+995 599 390 961',
   },
   footer: { left: '© 2026 Nikita Rykhlov · Designed & built with care', backToTop: 'Back to top' },
@@ -315,7 +315,7 @@ const ru: Content = {
   },
   contact: {
     title: 'Сделаем что-то, что работает само.',
-    subtitle: 'Открыт к ролям senior back-end и архитектора. Быстрее всего — почта или Telegram.',
+    subtitle: 'Открыт к ролям senior back-end и архитектора. Быстрее всего — почта или WhatsApp.',
     email: 'nikita_rykhlov@outlook.com', phone: '+995 599 390 961',
   },
   footer: { left: '© 2026 Никита Рыхлов · Сделано с заботой', backToTop: 'Наверх' },
