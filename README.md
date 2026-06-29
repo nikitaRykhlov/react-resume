@@ -28,6 +28,7 @@ It's a lightweight, backend-free solution built using only frontend technologies
 ## 🛠 Tech Stack
 
 - **React** – For component-based UI architecture
+- **Vite** – Fast dev server and optimized production builds
 - **HTML5 / SCSS** – Semantic markup and styling
 - **TypeScript** – Client-side logic
 - **Responsive Design**
