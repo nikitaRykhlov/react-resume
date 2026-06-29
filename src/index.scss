@@ -862,12 +862,6 @@ main { position: relative; z-index: 2; }
   border-radius: 11px;
   flex-shrink: 0;
   &--soft { background: var(--brand-soft); color: var(--accent, var(--brand)); }
-  &--gmt {
-    background: var(--surface-3);
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    font-size: 13px;
-  }
 }
 .tile__main { flex: 1; min-width: 0; }
 .tile__label {

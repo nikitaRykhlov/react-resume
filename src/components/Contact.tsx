@@ -69,7 +69,9 @@ const Contact: React.FC<ContactProps> = ({ t, socials }) => {
           </div>
 
           <div className="tile">
-            <span className="tile__icon tile__icon--gmt">GMT</span>
+            <span className="tile__icon tile__icon--soft">
+              <Icon id="clock" size={20} />
+            </span>
             <div className="tile__main">
               <div className="tile__label">{t.ui.timezone}</div>
               <div className="tile__value tile__value--mono">UTC+04:00</div>
