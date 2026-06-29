@@ -1,5 +1,6 @@
 import React from 'react';
-import type { Content, Social } from '../i18n/content';
+import type { Content, Lang, Social } from '../i18n/content';
+import { cvFiles } from '../i18n/content';
 import type { Theme } from '../hooks/usePrefs';
 import Icon from './Icon';
 import { useHeroCanvas } from '../hooks/useHeroCanvas';
@@ -7,11 +8,12 @@ import { scrollToId } from '../lib/scroll';
 
 interface HeroProps {
   t: Content;
+  lang: Lang;
   theme: Theme;
   socials: Social[];
 }
 
-const Hero: React.FC<HeroProps> = ({ t, theme, socials }) => {
+const Hero: React.FC<HeroProps> = ({ t, lang, theme, socials }) => {
   const { heroRef, canvasRef, spotRef } = useHeroCanvas(theme);
 
   return (
@@ -47,6 +49,10 @@ const Hero: React.FC<HeroProps> = ({ t, theme, socials }) => {
             <button className="btn-secondary" onClick={() => scrollToId('experience')}>
               {t.hero.ctaSecondary}
             </button>
+            <a className="btn-secondary btn-cv" href={cvFiles[lang]} download>
+              {t.ui.downloadCv}
+              <Icon id="download" size={17} />
+            </a>
             <div className="social-row">
               {socials.map((s) => (
                 <a

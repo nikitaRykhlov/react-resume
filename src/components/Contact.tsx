@@ -1,18 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
-import type { Content, Social } from '../i18n/content';
-import { COPY_EMAIL, COPY_PHONE } from '../i18n/content';
+import type { Content, Lang, Social } from '../i18n/content';
+import { COPY_EMAIL, COPY_PHONE, cvFiles } from '../i18n/content';
 import Eyebrow from './Eyebrow';
 import Reveal from './Reveal';
 import Icon from './Icon';
 
 interface ContactProps {
   t: Content;
+  lang: Lang;
   socials: Social[];
 }
 
 type Copied = 'email' | 'phone' | null;
 
-const Contact: React.FC<ContactProps> = ({ t, socials }) => {
+const Contact: React.FC<ContactProps> = ({ t, lang, socials }) => {
   const [copied, setCopied] = useState<Copied>(null);
   const timer = useRef<ReturnType<typeof setTimeout>>();
 
@@ -77,6 +78,14 @@ const Contact: React.FC<ContactProps> = ({ t, socials }) => {
               <div className="tile__value tile__value--mono">UTC+04:00</div>
             </div>
           </div>
+
+        </Reveal>
+
+        <Reveal className="contact__cta">
+          <a className="btn-primary btn-cv contact__cta-btn" href={cvFiles[lang]} download>
+            <Icon id="download" size={17} />
+            {t.ui.downloadCv}
+          </a>
         </Reveal>
 
         <Reveal className="contact__socials">

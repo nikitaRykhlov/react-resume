@@ -4,7 +4,7 @@
 export type IconId =
   | 'github' | 'linkedin' | 'telegram' | 'whatsapp' | 'facebook' | 'x'
   | 'devto' | 'medium' | 'mail' | 'copy' | 'check' | 'external'
-  | 'sun' | 'moon' | 'arrow' | 'down' | 'clock';
+  | 'sun' | 'moon' | 'arrow' | 'down' | 'clock' | 'download';
 
 export interface Social {
   href: string;
@@ -60,6 +60,7 @@ export interface Content {
     about: string; experience: string; skills: string; awards: string;
     education: string; certifications: string; writing: string; contact: string;
     responsibilities: string; team: string; email: string; phone: string; timezone: string;
+    downloadCv: string;
   };
   nav: { about: string; experience: string; skills: string; awards: string; contact: string };
   hero: {
@@ -96,7 +97,7 @@ const rbsSkills = ['Golang', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSock
 const eduSkills = ['Information Security', 'Network Security', 'Golang', 'Algorithms', 'Data Structures'];
 
 const en: Content = {
-  ui: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Honors & Awards', education: 'Education', certifications: 'Certifications', writing: 'Writing', contact: 'Contact', responsibilities: 'Responsibilities', team: 'Team', email: 'Email', phone: 'Phone', timezone: 'Time zone' },
+  ui: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Honors & Awards', education: 'Education', certifications: 'Certifications', writing: 'Writing', contact: 'Contact', responsibilities: 'Responsibilities', team: 'Team', email: 'Email', phone: 'Phone', timezone: 'Time zone', downloadCv: 'Download CV' },
   nav: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Awards', contact: 'Contact' },
   hero: {
     status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
@@ -226,7 +227,7 @@ const en: Content = {
 };
 
 const ru: Content = {
-  ui: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', education: 'Образование', certifications: 'Сертификаты', writing: 'Блог', contact: 'Контакты', responsibilities: 'Обязанности', team: 'Команда', email: 'Почта', phone: 'Телефон', timezone: 'Часовой пояс' },
+  ui: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', education: 'Образование', certifications: 'Сертификаты', writing: 'Блог', contact: 'Контакты', responsibilities: 'Обязанности', team: 'Команда', email: 'Почта', phone: 'Телефон', timezone: 'Часовой пояс', downloadCv: 'Скачать CV' },
   nav: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', contact: 'Контакты' },
   hero: {
     status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
@@ -360,3 +361,9 @@ export const content: Record<Lang, Content> = { en, ru };
 // Raw values used by the copy buttons (no spaces / formatting).
 export const COPY_EMAIL = 'nikita_rykhlov@outlook.com';
 export const COPY_PHONE = '+995599390961';
+
+// Pre-generated CV PDFs (see scripts/build-cv.mjs), one per language.
+export const cvFiles: Record<Lang, string> = {
+  en: '/cv/Nikita-Rykhlov-CV-EN.pdf',
+  ru: '/cv/Nikita-Rykhlov-CV-RU.pdf',
+};

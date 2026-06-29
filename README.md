@@ -35,6 +35,22 @@ It's a lightweight, backend-free solution built using only frontend technologies
 
 ---
 
+## 📄 Downloadable CV
+
+The site offers a one-click **Download CV** (EN/RU, matching the selected language).
+The PDFs live in `public/cv/` and are generated from a styled HTML template via the
+system Chrome in headless mode — no Puppeteer/Chromium download needed.
+
+```bash
+npm run cv   # regenerates public/cv/Nikita-Rykhlov-CV-{EN,RU}.pdf
+```
+
+Edit the résumé copy in `scripts/build-cv.mjs` (source of truth: the full
+`resume.md` / `resume.ru.md`) and re-run the command. Override the browser with
+`CHROME_BIN=/path/to/chrome npm run cv` if Chrome isn't auto-detected.
+
+---
+
 ## 💡 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.

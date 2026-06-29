@@ -21,7 +21,7 @@ function App() {
     <div className="app">
       <IconSprite />
       <Nav t={t} lang={lang} theme={theme} setLang={setLang} toggleTheme={toggleTheme} />
-      <Hero t={t} theme={theme} socials={socials} />
+      <Hero t={t} lang={lang} theme={theme} socials={socials} />
       <main>
         <About t={t} />
         <Experience t={t} />
@@ -29,7 +29,7 @@ function App() {
         <Awards t={t} />
         <Education t={t} />
         <Writing t={t} />
-        <Contact t={t} socials={socials} />
+        <Contact t={t} lang={lang} socials={socials} />
         <Footer t={t} />
       </main>
     </div>

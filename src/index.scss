@@ -314,6 +314,13 @@ body {
   transition: color .15s ease, border-color .15s ease;
   &:hover { border-color: var(--accent, var(--brand)); color: var(--text-strong); }
 }
+a.btn-primary, a.btn-secondary { text-decoration: none; }
+.btn-cv { gap: 9px; }
+.hero__actions .btn-primary,
+.hero__actions .btn-secondary {
+  min-width: 184px;
+  justify-content: center;
+}
 
 .social-row { display: flex; gap: 6px; margin-left: 4px; }
 .social-btn {
@@ -914,6 +921,8 @@ main { position: relative; z-index: 2; }
   transition: color .15s ease, border-color .15s ease;
   &:hover { color: var(--text-strong); border-color: var(--accent, var(--brand)); }
 }
+.contact__cta { margin-top: 32px; }
+.contact__cta-btn { width: 100%; justify-content: center; }
 .contact__socials { display: flex; gap: 8px; margin-top: 30px; }
 .contact__social {
   display: grid;
