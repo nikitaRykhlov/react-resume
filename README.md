@@ -2,7 +2,7 @@
 
 A simple and modern personal resume website built with React. This project is based on an open-source template that I forked and customized to better fit my needs — both visually and functionally.
 
-🔗 [Live Demo](https://nikita-rykhlov.tech)
+🔗 [Live Demo](https://rykhlov.tech)
 
 ---
 
