@@ -216,7 +216,7 @@ const en = {
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'May 2023', tags: 'Golang, Software Development, Programming Languages' },
   ],
   skills: [
-    { label: 'Languages', items: 'English (Limited working proficiency), Russian (native)' },
+    { label: 'Languages', items: 'English (Professional working proficiency), Russian (native)' },
     { label: 'Programming Languages', items: 'Golang, JavaScript, TypeScript, PHP' },
     { label: 'Frontend Development', items: 'HTML, CSS, React, Angular' },
     { label: 'Storages', items: 'PostgreSQL, ElasticSearch, MySQL, Redis, S3' },
@@ -413,7 +413,7 @@ const ru = {
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'Май 2023', tags: 'Golang, Software Development, Programming Languages' },
   ],
   skills: [
-    { label: 'Языки', items: 'Английский (Limited working proficiency), Русский (родной)' },
+    { label: 'Языки', items: 'Английский (Professional working proficiency), Русский (родной)' },
     { label: 'Языки программирования', items: 'Golang, JavaScript, TypeScript, PHP' },
     { label: 'Frontend-разработка', items: 'HTML, CSS, React, Angular' },
     { label: 'Хранилища', items: 'PostgreSQL, ElasticSearch, MySQL, Redis, S3' },
