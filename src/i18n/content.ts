@@ -203,6 +203,7 @@ const en: Content = {
     degree: 'Computer & Information Systems Security / Information Assurance',
     school: 'Saratov State Technical University', period: '2016 — 2020', skills: eduSkills,
     certs: [
+      { title: 'Web3 General Proficiency Certification', issuer: 'Chainstack', date: 'Jul 2025', href: 'https://cert.chainstack.com/certificates/certificates.php?id=6A608CC76AD24' },
       { title: 'SQL & PostgreSQL: The Complete Developer’s Guide', issuer: 'Udemy', date: 'Mar 2024', href: 'https://ude.my/UC-891c03c5-be4a-4d5e-931b-3a34e0c26bd5/' },
       { title: 'Redis: The Complete Developer’s Guide', issuer: 'Udemy', date: 'Jan 2024', href: 'https://ude.my/UC-54fb98de-5a87-494b-a812-814f59e286a5/' },
       { title: 'Go — The Complete Guide', issuer: 'Udemy', date: 'May 2023', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/' },
@@ -333,6 +334,7 @@ const ru: Content = {
     degree: 'Безопасность компьютерных и информационных систем',
     school: 'Саратовский государственный технический университет', period: '2016 — 2020', skills: eduSkills,
     certs: [
+      { title: 'Web3 General Proficiency Certification', issuer: 'Chainstack', date: 'Июль 2025', href: 'https://cert.chainstack.com/certificates/certificates.php?id=6A608CC76AD24' },
       { title: 'SQL & PostgreSQL: The Complete Developer’s Guide', issuer: 'Udemy', date: 'Март 2024', href: 'https://ude.my/UC-891c03c5-be4a-4d5e-931b-3a34e0c26bd5/' },
       { title: 'Redis: The Complete Developer’s Guide', issuer: 'Udemy', date: 'Янв 2024', href: 'https://ude.my/UC-54fb98de-5a87-494b-a812-814f59e286a5/' },
       { title: 'Go — The Complete Guide', issuer: 'Udemy', date: 'Май 2023', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/' },

@@ -211,6 +211,7 @@ const en = {
     school: 'Saratov State Technical University', location: 'Saratov, Russia', period: 'Sep 2016 — Jan 2020',
   },
   certs: [
+    { title: 'Web3 General Proficiency Certification', href: 'https://cert.chainstack.com/certificates/certificates.php?id=6A608CC76AD24', issuer: 'Chainstack', date: 'Jul 2025', tags: 'Web3, Blockchain, Web3 Infrastructure' },
     { title: 'SQL and PostgreSQL: The Complete Developer’s Guide', href: 'https://ude.my/UC-891c03c5-be4a-4d5e-931b-3a34e0c26bd5/', issuer: 'Udemy', date: 'Mar 2024', tags: 'SQL, PostgreSQL, Database Design, Software Development' },
     { title: 'Redis: The Complete Developer’s Guide', href: 'https://ude.my/UC-54fb98de-5a87-494b-a812-814f59e286a5/', issuer: 'Udemy', date: 'Jan 2024', tags: 'Redis, Database Design' },
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'May 2023', tags: 'Golang, Software Development, Programming Languages' },
@@ -408,6 +409,7 @@ const ru = {
     school: 'Саратовский государственный технический университет', location: 'Саратов, Россия', period: 'Сен 2016 — Янв 2020',
   },
   certs: [
+    { title: 'Web3 General Proficiency Certification', href: 'https://cert.chainstack.com/certificates/certificates.php?id=6A608CC76AD24', issuer: 'Chainstack', date: 'Июль 2025', tags: 'Web3, Blockchain, Web3-инфраструктура' },
     { title: 'SQL and PostgreSQL: The Complete Developer’s Guide', href: 'https://ude.my/UC-891c03c5-be4a-4d5e-931b-3a34e0c26bd5/', issuer: 'Udemy', date: 'Март 2024', tags: 'SQL, PostgreSQL, Database Design, Software Development' },
     { title: 'Redis: The Complete Developer’s Guide', href: 'https://ude.my/UC-54fb98de-5a87-494b-a812-814f59e286a5/', issuer: 'Udemy', date: 'Янв 2024', tags: 'Redis, Database Design' },
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'Май 2023', tags: 'Golang, Software Development, Programming Languages' },
