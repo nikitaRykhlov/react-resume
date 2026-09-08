@@ -90,10 +90,10 @@ export const socials: Social[] = [
   { href: 'https://x.com/NikitaRykhlov', label: 'X', icon: 'x' },
 ];
 
-const tabbySkills = ['Golang', 'ElasticSearch', 'Microservices', 'PostgreSQL', 'GCP', 'GCS', 'Pub/Sub', 'Redis', 'Kubernetes', 'Software Architecture', 'gRPC', 'DDD', 'High Availability', 'Distributed Systems', 'TDD'];
-const kuperSkills = ['Microservices', 'PostgreSQL', 'Kubernetes', 'S3', 'Redis', 'Kafka', 'Scalability', 'Software Architecture', 'gRPC', 'DDD', 'Golang', 'High Availability', 'Distributed Systems', 'TDD', 'GitLab'];
-const elmaSkills = ['Golang', 'Kubernetes', 'Angular', 'Distributed Systems', 'High Availability', 'Scalability', 'Microservices', 'S3', 'Redis', 'TDD', 'GitLab'];
-const rbsSkills = ['Golang', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSockets', 'React.js', 'Docker', 'PHP', 'Full Stack'];
+const tabbySkills = ['Golang', 'Elasticsearch', 'Microservices', 'PostgreSQL', 'GCP', 'GCS', 'Pub/Sub', 'Redis', 'Kubernetes', 'Software Architecture', 'REST API', 'gRPC', 'DDD', 'High Availability', 'Distributed Systems', 'Datadog', 'OpenTelemetry', 'TDD'];
+const kuperSkills = ['Microservices', 'PostgreSQL', 'Kubernetes', 'S3', 'Redis', 'Kafka', 'Scalability', 'Software Architecture', 'REST API', 'gRPC', 'DDD', 'Golang', 'High Availability', 'Distributed Systems', 'Grafana', 'VictoriaMetrics', 'Kibana', 'Jaeger', 'Sentry', 'OpenTelemetry', 'TDD', 'GitLab'];
+const elmaSkills = ['Golang', 'Kubernetes', 'Angular', 'Distributed Systems', 'High Availability', 'Scalability', 'Microservices', 'REST API', 'S3', 'Redis', 'Grafana', 'Prometheus', 'Loki', 'Jaeger', 'TDD', 'GitLab'];
+const rbsSkills = ['Golang', 'REST API', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSockets', 'React.js', 'Docker', 'PHP', 'Prometheus', 'Grafana', 'Graylog', 'Jaeger', 'Full Stack'];
 const eduSkills = ['Information Security', 'Network Security', 'Golang', 'Algorithms', 'Data Structures'];
 
 const en: Content = {
@@ -103,7 +103,7 @@ const en: Content = {
     status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
     tagline: 'I design and maintain high-load distributed systems where performance, reliability and fault tolerance come first.',
     years: '5+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
-    location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'ElasticSearch', 'PostgreSQL'],
+    location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
   },
   about: {
     title: 'I build systems meant to last.',
@@ -126,13 +126,13 @@ const en: Content = {
         highlights: [
           { value: '88.1%', text: 'ad coverage across product screens (from 24.3%) via a universal source blender for ranked feeds' },
           { value: '~87%', text: 'faster update delivery to users — from 13–16 hours down to 2 — by decoupling the pipeline and adding an orchestrator' },
-          { value: '~38%', text: 'lower search latency by migrating the ElasticSearch cluster to geo-sharding for a new-country launch' },
-          { value: '99.95%', text: 'ElasticSearch cluster availability maintained throughout the migration' },
+          { value: '~38%', text: 'lower search latency by migrating the Elasticsearch cluster to geo-sharding for a new-country launch' },
+          { value: '99.95%', text: 'Elasticsearch cluster availability maintained throughout the migration' },
         ],
         details: [
           'Acted as Feature/Tech Lead across initiatives — owned architecture, delivery and hands-on development end to end.',
           'Designed and built the search and recommendation engines, including merchant suggest and result limiting.',
-          'Led the ElasticSearch geo-sharding migration for a new market, with HA/failover validation and recovery docs.',
+          'Led the Elasticsearch geo-sharding migration for a new market, with HA/failover validation and recovery docs.',
           'Built a per-A/B-group config system and dynamic loading of ML embeddings and CTR models from GCS without releases.',
         ], skills: tabbySkills,
       },
@@ -184,11 +184,14 @@ const en: Content = {
     title: 'A full-stack toolkit, with a back-end core.',
     items: [
       { name: 'Languages', desc: 'English and Russian — comfortable with professional communication, technical writing and documentation.', chips: ['English', 'Russian'] },
-      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'ElasticSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
+      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
+      { name: 'Search & Ranking', desc: 'Large-scale search, ranking and recommendation systems: relevance tuning, blending multiple sources into one feed, and running experiments over it.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
       { name: 'Front End', desc: 'User interfaces with clean structure, responsive design and a smooth experience; complex frontend logic integrated with backends.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
-      { name: 'Development', desc: 'Architecting complex systems with maintainability, scalability and clean-code practices at the core.', chips: ['Software Architecture', 'DDD', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps & Cloud', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and running infrastructure on the cloud with a focus on automation and reliability.', chips: ['Kubernetes', 'Docker', 'Helm', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'Development', desc: 'Architecting complex systems with maintainability, scalability and clean-code practices at the core.', chips: ['Software Architecture', 'DDD', 'Clean Architecture', 'CQRS', 'Outbox Pattern', 'Idempotency', 'Rate Limiting', 'Event-Driven Architecture', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
+      { name: 'DevOps & Cloud', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and running infrastructure on the cloud with a focus on automation and reliability.', chips: ['Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'Observability & Reliability', desc: 'Metrics, logs and distributed tracing across services — dashboards, alerting and early incident detection that cut time to diagnosis.', chips: ['Prometheus', 'Grafana', 'VictoriaMetrics', 'Datadog', 'OpenTelemetry', 'Jaeger', 'Loki', 'Graylog', 'Kibana', 'Sentry', 'SLO', 'Alerting', 'Incident Management', 'Postmortems', 'On-call', 'Disaster Recovery'] },
       { name: 'AI-Assisted Development', desc: 'Speeding up prototyping, spec-driven workflows and delivery with modern AI development tooling.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
+      { name: 'Leadership', desc: 'Owning solution architecture end to end, growing engineers through mentoring and code review, and aligning technical decisions with business goals.', chips: ['Technical Leadership', 'Mentoring', 'System Design', 'Code Review', 'Hiring', 'Technical Interviewing', 'Stakeholder Management', 'Agile'] },
       { name: 'Other', desc: 'Project management, system modelling and design collaboration — task tracking, architecture visualisation and API testing.', chips: ['Jira', 'UML', 'BPMN', 'C4 Model', 'Figma', 'Postman'] },
     ],
   },
@@ -234,7 +237,7 @@ const ru: Content = {
     status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
     tagline: 'Проектирую и поддерживаю высоконагруженные распределённые системы, где на первом месте производительность, надёжность и отказоустойчивость.',
     years: '5+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
-    location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'ElasticSearch', 'PostgreSQL'],
+    location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
   },
   about: {
     title: 'Создаю системы, которые живут долго.',
@@ -257,13 +260,13 @@ const ru: Content = {
         highlights: [
           { value: '88.1%', text: 'покрытие рекламой по экранам продукта (с 24.3%) за счёт универсального блендера источников для ранжированной выдачи' },
           { value: '~87%', text: 'быстрее доставка обновлений до пользователя — с 13–16 часов до 2 — за счёт decoupling пайплайна и оркестратора' },
-          { value: '~38%', text: 'ниже latency поиска благодаря миграции кластера ElasticSearch на geo-sharding для запуска в новой стране' },
-          { value: '99.95%', text: 'доступность кластера ElasticSearch в ходе всей миграции' },
+          { value: '~38%', text: 'ниже latency поиска благодаря миграции кластера Elasticsearch на geo-sharding для запуска в новой стране' },
+          { value: '99.95%', text: 'доступность кластера Elasticsearch в ходе всей миграции' },
         ],
         details: [
           'Был Feature/Tech Lead в нескольких инициативах — отвечал за архитектуру, доставку и непосредственную разработку.',
           'Спроектировал и построил движки поиска и рекомендаций, включая саджест мерчантов и лимитирование результатов.',
-          'Руководил миграцией ElasticSearch на geo-sharding для нового рынка с проверкой HA/отказоустойчивости.',
+          'Руководил миграцией Elasticsearch на geo-sharding для нового рынка с проверкой HA/отказоустойчивости.',
           'Сделал конфиги per-A/B-группу и динамическую загрузку ML-эмбеддингов и CTR-моделей из GCS без релизов.',
         ], skills: tabbySkills,
       },
@@ -315,11 +318,14 @@ const ru: Content = {
     title: 'Full-stack-набор с backend-ядром.',
     items: [
       { name: 'Языки', desc: 'Английский и русский — свободно для профессионального общения, технической переписки и документации.', chips: ['Английский', 'Русский'] },
-      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'ElasticSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'WebSockets'] },
+      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
+      { name: 'Поиск и ранжирование', desc: 'Крупномасштабный поиск, ранжирование и рекомендации: настройка релевантности, смешивание источников в единую выдачу и эксперименты над ней.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
       { name: 'Front End', desc: 'Интерфейсы с чистой структурой, адаптивной вёрсткой и плавным UX; сложная frontend-логика в связке с backend.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
-      { name: 'Разработка', desc: 'Проектирование сложных систем с упором на поддерживаемость, масштабируемость и чистый код.', chips: ['Software Architecture', 'DDD', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps и облако', desc: 'CI/CD-пайплайны, контейнеризация и инфраструктура в облаке с упором на автоматизацию и надёжность.', chips: ['Kubernetes', 'Docker', 'Helm', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'Разработка', desc: 'Проектирование сложных систем с упором на поддерживаемость, масштабируемость и чистый код.', chips: ['Software Architecture', 'DDD', 'Clean Architecture', 'CQRS', 'Outbox Pattern', 'Idempotency', 'Rate Limiting', 'Event-Driven Architecture', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
+      { name: 'DevOps и облако', desc: 'CI/CD-пайплайны, контейнеризация и инфраструктура в облаке с упором на автоматизацию и надёжность.', chips: ['Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'Observability и надёжность', desc: 'Метрики, логи и распределённая трассировка по сервисам — дашборды, алертинг и раннее обнаружение инцидентов.', chips: ['Prometheus', 'Grafana', 'VictoriaMetrics', 'Datadog', 'OpenTelemetry', 'Jaeger', 'Loki', 'Graylog', 'Kibana', 'Sentry', 'SLO', 'Alerting', 'Incident Management', 'Postmortems', 'On-call', 'Disaster Recovery'] },
       { name: 'AI-разработка', desc: 'Ускоряю прототипирование, spec-driven процессы и доставку с помощью современных AI-инструментов разработки.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
+      { name: 'Лидерство', desc: 'Владение архитектурой решения от начала до конца, развитие инженеров через менторство и код-ревью, увязка технических решений с целями бизнеса.', chips: ['Technical Leadership', 'Mentoring', 'System Design', 'Code Review', 'Hiring', 'Technical Interviewing', 'Stakeholder Management', 'Agile'] },
       { name: 'Прочее', desc: 'Управление проектами, моделирование систем и работа с дизайном — трекинг задач, визуализация архитектуры и тестирование API.', chips: ['Jira', 'UML', 'BPMN', 'C4 Model', 'Figma', 'Postman'] },
     ],
   },

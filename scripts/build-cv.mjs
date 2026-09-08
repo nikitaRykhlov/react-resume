@@ -1,7 +1,12 @@
 // Generates print-ready CV PDFs (EN + RU) into public/cv/.
 //
 // Content is the full résumé (richer than the site copy): every job carries
-// Key Achievements, Responsibilities, Technical Contributions and Key Learnings.
+// Key Achievements, Responsibilities and Technical Contributions. A "Key Learnings"
+// block was dropped — it added length without keywords an ATS can match.
+//
+// The layout is deliberately ATS-oriented: single column throughout, no absolutely
+// positioned text (it paints out of reading order in the PDF content stream), real
+// list markers, ligatures disabled, no justified text.
 // Rendered from a styled HTML template via the system Chrome in headless mode —
 // no Puppeteer/Chromium download. Run with: npm run cv
 //
@@ -33,12 +38,25 @@ function findChrome() {
   throw new Error('No Chrome/Chromium found. Set CHROME_BIN to a Chromium binary.');
 }
 
+// Hyphenated compounds (full-stack, event-driven, on-call) are keywords an ATS
+// matches whole. A line break at the hyphen splits them across two lines in the
+// PDF text layer, and parsers that join lines with a space lose the term. A
+// non-breaking hyphen (U+2011) would break matching just as badly, so pin the
+// word with nowrap instead and keep a plain ASCII hyphen in the text.
+// Applied outside tags only, so hyphens inside href="..." are left alone.
+function nowrapCompounds(html) {
+  return html.split(/(<[^>]*>)/).map((seg, i) => (i % 2 ? seg : seg.replace(
+    /\b[A-Za-z]{2,}(?:-[A-Za-z0-9]{1,})+\b/g,
+    (m) => (m.length <= 24 ? `<span class="nb">${m}</span>` : m),
+  ))).join('');
+}
+
 // --- tiny inline-markdown renderer: escapes HTML, then **bold** and [text](url) ---
 function inline(s) {
-  return String(s)
+  return nowrapCompounds(String(s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'));
 }
 
 // ---------------------------------------------------------------- shared data
@@ -56,11 +74,11 @@ const shared = {
 // ---------------------------------------------------------------- English copy
 const en = {
   ...shared,
+  lang: 'en',
   L: {
     about: 'About', topSkills: 'Top Skills', experience: 'Experience',
-    achievements: 'Key Achievements', responsibilities: 'Responsibilities',
-    contributions: 'Technical Contributions', learnings: 'Key Learnings',
-    team: 'Team', education: 'Education', certs: 'Licences & Certificates',
+    achievements: 'Key Achievements', responsibilities: 'Responsibilities & Technical Contributions',
+    team: 'Team', education: 'Education', certs: 'Certifications',
     skills: 'Skills', awards: 'Honors & Awards', brand: 'Personal Brand', stack: 'Stack',
   },
   about: [
@@ -68,10 +86,10 @@ const en = {
     'Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.',
     'I enjoy sharing knowledge and best practices, which is why I actively maintain and develop a technical blog. When entrusted with a task, I take full ownership and ensure timely delivery with high efficiency and quality, regardless of the project’s scope or audience.',
   ],
-  topSkills: ['Golang', 'PostgreSQL', 'Kafka', 'Redis', 'S3', 'Kubernetes', 'ElasticSearch', 'Software Architecture', 'Scalability', 'Microservices', 'High Availability', 'Distributed Systems'],
+  topSkills: ['Go (Golang)', 'PostgreSQL', 'Kafka', 'Redis', 'S3', 'Kubernetes', 'Elasticsearch', 'Software Architecture', 'Scalability', 'Microservices', 'High Availability', 'Distributed Systems'],
   experience: [
     {
-      company: 'Tabby', href: 'https://www.linkedin.com/company/tabbypay/', unit: 'Search & Recommendations',
+      company: 'Tabby', href: 'https://www.linkedin.com/company/tabbypay/', unit: 'Marketplace · Search & Recommendations',
       role: 'Tech Lead / Feature Lead, Senior Backend Developer', period: 'Jul 2025 — Present',
       location: 'Abu Dhabi, UAE — Remote', team: '7 people',
       achievements: [
@@ -81,12 +99,12 @@ const en = {
         'Cut incident detection time from **30–60 minutes to 1–15 minutes** with a purpose-built process- and system-state monitoring tool.',
         'Reduced new ML-experiment setup time by **~71%** by enabling dynamic loading of embeddings and CTR-model versions from GCS without code releases.',
         'Lowered embedding update cost by **~63%** through incremental user-embedding refresh, replacing full reindexing.',
-        'Enabled product launch in a new country by migrating the ElasticSearch cluster to geo-sharding: per-shard country-based filtering cut average search latency by **~38%** and documents scanned per query by **~55%**, while maintaining **99.95%** cluster availability throughout the migration.',
+        'Enabled product launch in a new country by migrating the Elasticsearch cluster to geo-sharding: per-shard country-based filtering cut average search latency by **~38%** and documents scanned per query by **~55%**, while maintaining **99.95%** cluster availability throughout the migration.',
       ],
       responsibilities: [
         'Acted as Feature/Tech Lead across multiple initiatives: owned solution architecture, feature delivery control and hands-on development end to end.',
         'Designed and built the search and recommendation engines, including merchant suggest improvements and result limiting.',
-        'Led the ElasticSearch cluster migration for a new-country market entry: requirements gathering, country-specific data filtering, functional and load testing, HA/failover validation and recovery-scenario documentation.',
+        'Led the Elasticsearch cluster migration for a new-country market entry: requirements gathering, country-specific data filtering, functional and load testing, HA/failover validation and recovery-scenario documentation.',
         'Worked in tight coordination with the ML team on artifacts and data stored in GCS.',
         'Handled on-call rotations, authored incident documentation and postmortems in English, and mentored colleagues (including writing performance reviews).',
       ],
@@ -96,17 +114,11 @@ const en = {
         'Added loading and indexing of multiple CTR-model versions from GCS, enabling side-by-side comparison and switching within experiments without redeploys.',
         'Delivered a centralized configuration system tunable per A/B experiment group for rapid hypothesis testing.',
         'Rebuilt the category tree as a facet-based structure with counters and facet logic.',
-        'Diagnosed an ElasticSearch performance bottleneck in JSON deserialization within the ES client and evaluated a custom marshaller.',
+        'Diagnosed an Elasticsearch performance bottleneck in JSON deserialization within the ES client and evaluated a custom marshaller.',
         'Developed a delivery orchestrator and a state-tracking tool for observability.',
         'Adopted AI-assisted development tooling (Cursor, Claude Code, GitHub Spec Kit, OpenCode, MCP) to speed up prototyping, spec-driven workflows and delivery.',
       ],
-      learnings: [
-        'Deepened expertise in large-scale search, ranking and recommendation systems on ElasticSearch.',
-        'Strengthened collaboration patterns between backend and ML teams around shared GCS artifacts.',
-        'Learned to design for experimentation, decoupling configuration and ML artifacts from release cycles.',
-        'Reinforced the value of observability and validation in reducing operational risk.',
-      ],
-      stack: 'Microservices, Golang, ElasticSearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, gRPC, DDD, High Availability, Distributed Systems, TDD, GitLab, Jira',
+      stack: 'Microservices, Golang, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'Kuper', href: 'https://www.linkedin.com/company/kuper-ru/', unit: 'B2B · Growth & Engagement',
@@ -132,13 +144,7 @@ const en = {
         'Applied Test-Driven Development (TDD) practices to ensure code quality.',
         'Managed CI/CD pipelines with GitLab and tracked tasks in Jira.',
       ],
-      learnings: [
-        'Mastered distributed systems and DDD principles for complex domains.',
-        'Enhanced communication skills to align technical solutions with business needs.',
-        'Balanced short-term goals with long-term architectural improvements.',
-        'Refined hiring practices to build cohesive, high-performing teams.',
-      ],
-      stack: 'Microservices, PostgreSQL, Kubernetes, S3, Redis, Kafka, Scalability, Software Architecture, gRPC, DDD, Golang, High Availability, Distributed Systems, TDD, GitLab, Jira',
+      stack: 'Microservices, PostgreSQL, Kubernetes, S3, Redis, Kafka, Scalability, Software Architecture, REST API, gRPC, DDD, Golang, High Availability, Distributed Systems, Observability, Grafana, VictoriaMetrics, Kibana, Jaeger, Sentry, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'ELMA365', href: 'https://www.linkedin.com/company/elmabpm/', unit: 'Document Management',
@@ -164,13 +170,7 @@ const en = {
         'Applied TDD principles to minimize technical debt and ensure maintainability.',
         'Used GitLab for CI/CD pipelines, streamlining development and deployment.',
       ],
-      learnings: [
-        'Mastered scalable microservices design using Golang, Kubernetes and distributed systems.',
-        'Improved full-stack development skills to create cohesive, user-focused solutions.',
-        'Recognized the value of TDD in maintaining code quality and reducing errors.',
-        'Gained expertise in workflow optimization and leveraging caching mechanisms like Redis.',
-      ],
-      stack: 'Golang, Kubernetes, Angular, Distributed Systems, High Availability, Scalability, Microservices, S3, Redis, TDD, GitLab',
+      stack: 'Golang, Kubernetes, Angular, Distributed Systems, High Availability, Scalability, Microservices, REST API, S3, Redis, Observability, Grafana, Prometheus, Loki, Jaeger, TDD, GitLab',
     },
     {
       company: 'Rainbowsoft', href: 'https://www.linkedin.com/company/%D0%BD%D0%BF%D0%BE-rbs-rainbowsoft-/', unit: 'Research & Development',
@@ -197,13 +197,7 @@ const en = {
         'Utilized Jenkins for CI/CD pipelines, ensuring smooth workflows.',
         'Modeled architecture with UML and BPMN for clarity and alignment.',
       ],
-      learnings: [
-        'Mastered microcomponent integration and hardware-software interaction.',
-        'Gained expertise in Docker for simplifying deployment and scaling.',
-        'Learned gRPC, WebSockets and cgo for high-performance solutions.',
-        'Improved full-stack skills, combining Golang, PHP and React.js effectively.',
-      ],
-      stack: 'Golang, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Full Stack Development, Web Technologies',
+      stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
   ],
   education: {
@@ -218,14 +212,19 @@ const en = {
   ],
   skills: [
     { label: 'Languages', items: 'English (Professional working proficiency), Russian (native)' },
-    { label: 'Programming Languages', items: 'Golang, JavaScript, TypeScript, PHP' },
+    { label: 'Programming Languages', items: 'Go (Golang), JavaScript, TypeScript, PHP' },
     { label: 'Frontend Development', items: 'HTML, CSS, React, Angular' },
-    { label: 'Storages', items: 'PostgreSQL, ElasticSearch, MySQL, Redis, S3' },
+    { label: 'Storages', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3' },
+    { label: 'Search & Ranking', items: 'Search Relevance, Ranking, Information Retrieval, Recommendation Systems, Personalization, Embeddings, A/B Testing, Experimentation' },
     { label: 'Version Control', items: 'Git, GitLab' },
-    { label: 'Containerization & Orchestration', items: 'Docker, Kubernetes, Helm' },
+    { label: 'Infrastructure & Orchestration', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx' },
+    { label: 'APIs & Communication', items: 'REST API, gRPC, Protocol Buffers (protobuf), OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0' },
     { label: 'Messaging Systems', items: 'Kafka, WebSockets' },
-    { label: 'Design Methodologies & Principles', items: 'Domain-Driven Design (DDD), Microservices, Scalability, High Availability, Distributed Systems' },
+    { label: 'Observability & Monitoring', items: 'Prometheus, Grafana, VictoriaMetrics, Datadog, OpenTelemetry, Jaeger, Loki, Graylog, Kibana, Sentry' },
+    { label: 'Reliability & SRE', items: 'SLO, SLA, Alerting, Incident Management, Postmortems, On-call, Disaster Recovery, Capacity Planning' },
+    { label: 'Design Methodologies & Principles', items: 'Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
     { label: 'Development Practices', items: 'Test-Driven Development (TDD)' },
+    { label: 'Leadership & Collaboration', items: 'Technical Leadership, Mentoring, System Design, Code Review, Hiring, Technical Interviewing, Stakeholder Management, Agile' },
     { label: 'AI-Assisted Development', items: 'Cursor, Claude Code, GitHub Spec Kit, Claude Design, OpenCode, Model Context Protocol (MCP), Claude Skills' },
     { label: 'CI/CD Tools', items: 'GitLab CI/CD, Jenkins' },
     { label: 'Project Management', items: 'Jira' },
@@ -253,12 +252,12 @@ const en = {
 // ---------------------------------------------------------------- Russian copy
 const ru = {
   ...shared,
+  lang: 'ru',
   roleLine: 'Tech Lead · Feature Lead · Senior Backend Developer',
   L: {
     about: 'О себе', topSkills: 'Ключевые навыки', experience: 'Опыт работы',
-    achievements: 'Ключевые достижения', responsibilities: 'Обязанности',
-    contributions: 'Технический вклад', learnings: 'Ключевые выводы',
-    team: 'Команда', education: 'Образование', certs: 'Лицензии и сертификаты',
+    achievements: 'Ключевые достижения', responsibilities: 'Обязанности и технический вклад',
+    team: 'Команда', education: 'Образование', certs: 'Сертификаты',
     skills: 'Навыки', awards: 'Награды и достижения', brand: 'Личный бренд', stack: 'Стек',
   },
   about: [
@@ -266,10 +265,10 @@ const ru = {
     'На протяжении карьеры я работал в крупных технологических компаниях с высокими стандартами, что помогло развить стратегическое мышление и способность создавать долговечные, эффективные решения. Помимо backend-разработки, у меня есть практический опыт во frontend, что позволяет подходить к проектам с full-stack перспективы.',
     'Мне нравится делиться знаниями и лучшими практиками, поэтому я активно веду технический блог. Когда мне поручают задачу, я беру на себя полную ответственность и обеспечиваю своевременную доставку с высокой эффективностью и качеством, независимо от масштаба проекта.',
   ],
-  topSkills: ['Golang', 'PostgreSQL', 'Kafka', 'Redis', 'S3', 'Kubernetes', 'ElasticSearch', 'Software Architecture', 'Scalability', 'Microservices', 'High Availability', 'Distributed Systems'],
+  topSkills: ['Go (Golang)', 'PostgreSQL', 'Kafka', 'Redis', 'S3', 'Kubernetes', 'Elasticsearch', 'Software Architecture', 'Scalability', 'Microservices', 'High Availability', 'Distributed Systems'],
   experience: [
     {
-      company: 'Tabby', href: 'https://www.linkedin.com/company/tabbypay/', unit: 'Поиск и рекомендации',
+      company: 'Tabby', href: 'https://www.linkedin.com/company/tabbypay/', unit: 'Marketplace · Поиск и рекомендации',
       role: 'Tech Lead / Feature Lead, Senior Backend Developer', period: 'Июл 2025 — наст. время',
       location: 'Абу-Даби, ОАЭ — Удалённо', team: '7 человек',
       achievements: [
@@ -279,12 +278,12 @@ const ru = {
         'Сократил время обнаружения инцидентов с **30–60 минут до 1–15 минут** с помощью специального инструмента отслеживания состояния процесса и системы.',
         'Сократил время подготовки нового ML-эксперимента на **~71%**, реализовав динамическую загрузку эмбеддингов и версий CTR-моделей из GCS без релизов кода.',
         'Снизил стоимость обновления эмбеддингов на **~63%** за счёт инкрементального обновления пользовательских эмбеддингов вместо полного реиндекса.',
-        'Обеспечил запуск продукта в новой стране, проведя миграцию кластера ElasticSearch на geo-sharding: пошардовая фильтрация по странам снизила среднюю latency поиска на **~38%** и объём сканируемых документов на запрос на **~55%**, сохранив **99.95%** доступности кластера в ходе миграции.',
+        'Обеспечил запуск продукта в новой стране, проведя миграцию кластера Elasticsearch на geo-sharding: пошардовая фильтрация по странам снизила среднюю latency поиска на **~38%** и объём сканируемых документов на запрос на **~55%**, сохранив **99.95%** доступности кластера в ходе миграции.',
       ],
       responsibilities: [
         'Выступал в роли Feature/Tech Lead в нескольких инициативах: отвечал за архитектуру решения, контроль доставки фичи и непосредственную разработку от начала до конца.',
         'Проектировал и разрабатывал движки поиска и рекомендаций, включая улучшение саджестов мерчантов и лимитирование результатов.',
-        'Руководил миграцией кластера ElasticSearch в рамках выхода на рынок новой страны: сбор требований, фильтрация данных по странам, функциональное и нагрузочное тестирование, проверка HA/отказоустойчивости и описание сценариев восстановления.',
+        'Руководил миграцией кластера Elasticsearch в рамках выхода на рынок новой страны: сбор требований, фильтрация данных по странам, функциональное и нагрузочное тестирование, проверка HA/отказоустойчивости и описание сценариев восстановления.',
         'Работал в плотной координации с командой ML над артефактами и данными в GCS.',
         'Участвовал в on-call дежурствах, писал incident-документацию и постмортемы на английском, менторил коллег (в том числе писал перформанс-ревью).',
       ],
@@ -294,17 +293,11 @@ const ru = {
         'Добавил загрузку и индексацию нескольких версий CTR-моделей из GCS, что позволило сравнивать и переключать их в экспериментах без релизов.',
         'Сделал централизованную систему конфигураций, настраиваемую per A/B-группу эксперимента, для быстрой проверки гипотез.',
         'Перестроил категорийное дерево в структуру на базе фасетов с каунтерами и facet logic.',
-        'Диагностировал боттлнек производительности ElasticSearch на десериализации JSON в ES-клиенте и оценил вариант с кастомным маршаллером.',
+        'Диагностировал боттлнек производительности Elasticsearch на десериализации JSON в ES-клиенте и оценил вариант с кастомным маршаллером.',
         'Разработал оркестратор доставки и инструмент отслеживания состояния для наблюдаемости.',
         'Внедрил инструменты AI-разработки (Cursor, Claude Code, GitHub Spec Kit, OpenCode, MCP) для ускорения прототипирования, spec-driven процессов и доставки.',
       ],
-      learnings: [
-        'Углубил экспертизу в крупномасштабных системах поиска, ранжирования и рекомендаций на ElasticSearch.',
-        'Усилил паттерны взаимодействия между backend- и ML-командами вокруг общих артефактов в GCS.',
-        'Научился проектировать под эксперименты, отделяя конфигурацию и ML-артефакты от релизного цикла.',
-        'Закрепил ценность наблюдаемости и валидации для снижения операционных рисков.',
-      ],
-      stack: 'Microservices, Golang, ElasticSearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, gRPC, DDD, High Availability, Distributed Systems, TDD, GitLab, Jira',
+      stack: 'Microservices, Golang, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'Kuper', href: 'https://www.linkedin.com/company/kuper-ru/', unit: 'B2B · Рост и вовлечение',
@@ -330,13 +323,7 @@ const ru = {
         'Применял практики Test-Driven Development (TDD) для обеспечения качества кода.',
         'Управлял CI/CD пайплайнами в GitLab и вёл задачи в Jira.',
       ],
-      learnings: [
-        'Освоил распределённые системы и принципы DDD для сложных доменов.',
-        'Развил навыки коммуникации для согласования технических решений с потребностями бизнеса.',
-        'Балансировал между краткосрочными целями и долгосрочными архитектурными улучшениями.',
-        'Отточил практики найма для построения сплочённых, высокопроизводительных команд.',
-      ],
-      stack: 'Microservices, PostgreSQL, Kubernetes, S3, Redis, Kafka, Scalability, Software Architecture, gRPC, DDD, Golang, High Availability, Distributed Systems, TDD, GitLab, Jira',
+      stack: 'Microservices, PostgreSQL, Kubernetes, S3, Redis, Kafka, Scalability, Software Architecture, REST API, gRPC, DDD, Golang, High Availability, Distributed Systems, Observability, Grafana, VictoriaMetrics, Kibana, Jaeger, Sentry, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'ELMA365', href: 'https://www.linkedin.com/company/elmabpm/', unit: 'Документооборот',
@@ -362,13 +349,7 @@ const ru = {
         'Применял принципы TDD для минимизации технического долга и поддержания сопровождаемости.',
         'Использовал GitLab для CI/CD пайплайнов, упрощая разработку и развёртывание.',
       ],
-      learnings: [
-        'Освоил проектирование масштабируемых микросервисов на Golang, Kubernetes и распределённых системах.',
-        'Улучшил навыки full-stack разработки для создания цельных, ориентированных на пользователя решений.',
-        'Осознал ценность TDD в поддержании качества кода и снижении количества ошибок.',
-        'Получил экспертизу в оптимизации рабочих процессов и кэшировании вроде Redis.',
-      ],
-      stack: 'Golang, Kubernetes, Angular, Distributed Systems, High Availability, Scalability, Microservices, S3, Redis, TDD, GitLab',
+      stack: 'Golang, Kubernetes, Angular, Distributed Systems, High Availability, Scalability, Microservices, REST API, S3, Redis, Observability, Grafana, Prometheus, Loki, Jaeger, TDD, GitLab',
     },
     {
       company: 'Rainbowsoft', href: 'https://www.linkedin.com/company/%D0%BD%D0%BF%D0%BE-rbs-rainbowsoft-/', unit: 'Research & Development',
@@ -395,13 +376,7 @@ const ru = {
         'Использовал Jenkins для CI/CD пайплайнов, обеспечивая бесперебойные процессы.',
         'Моделировал архитектуру с помощью UML и BPMN для ясности и согласованности.',
       ],
-      learnings: [
-        'Освоил интеграцию микрокомпонентов и взаимодействие аппаратной и программной частей.',
-        'Получил экспертизу в Docker для упрощения развёртывания и масштабирования.',
-        'Изучил gRPC, WebSockets и cgo для высокопроизводительных решений.',
-        'Улучшил full-stack навыки, эффективно сочетая Golang, PHP и React.js.',
-      ],
-      stack: 'Golang, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Full Stack Development, Web Technologies',
+      stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
   ],
   education: {
@@ -416,14 +391,19 @@ const ru = {
   ],
   skills: [
     { label: 'Языки', items: 'Английский (Professional working proficiency), Русский (родной)' },
-    { label: 'Языки программирования', items: 'Golang, JavaScript, TypeScript, PHP' },
+    { label: 'Языки программирования', items: 'Go (Golang), JavaScript, TypeScript, PHP' },
     { label: 'Frontend-разработка', items: 'HTML, CSS, React, Angular' },
-    { label: 'Хранилища', items: 'PostgreSQL, ElasticSearch, MySQL, Redis, S3' },
+    { label: 'Хранилища', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3' },
+    { label: 'Поиск и ранжирование', items: 'Search Relevance, Ranking, Information Retrieval, Recommendation Systems, Personalization, Embeddings, A/B Testing, Experimentation' },
     { label: 'Контроль версий', items: 'Git, GitLab' },
-    { label: 'Контейнеризация и оркестрация', items: 'Docker, Kubernetes, Helm' },
+    { label: 'Инфраструктура и оркестрация', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx' },
+    { label: 'API и коммуникация', items: 'REST API, gRPC, Protocol Buffers (protobuf), OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0' },
     { label: 'Системы обмена сообщениями', items: 'Kafka, WebSockets' },
-    { label: 'Методологии и принципы проектирования', items: 'Domain-Driven Design (DDD), Microservices, Scalability, High Availability, Distributed Systems' },
+    { label: 'Observability и мониторинг', items: 'Prometheus, Grafana, VictoriaMetrics, Datadog, OpenTelemetry, Jaeger, Loki, Graylog, Kibana, Sentry' },
+    { label: 'Надёжность и SRE', items: 'SLO, SLA, Alerting, Incident Management, Postmortems, On-call, Disaster Recovery, Capacity Planning' },
+    { label: 'Методологии и принципы проектирования', items: 'Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
     { label: 'Практики разработки', items: 'Test-Driven Development (TDD)' },
+    { label: 'Лидерство и взаимодействие', items: 'Technical Leadership, Mentoring, System Design, Code Review, Hiring, Technical Interviewing, Stakeholder Management, Agile' },
     { label: 'AI-разработка', items: 'Cursor, Claude Code, GitHub Spec Kit, Claude Design, OpenCode, Model Context Protocol (MCP), Claude Skills' },
     { label: 'CI/CD инструменты', items: 'GitLab CI/CD, Jenkins' },
     { label: 'Управление проектами', items: 'Jira' },
@@ -454,7 +434,8 @@ const css = `
   @page{size:A4;margin:13mm 14mm 14mm}
   html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{font-family:"Helvetica Neue",Arial,"Segoe UI",Roboto,sans-serif;color:#1E293B;
-    font-size:10pt;line-height:1.42;font-feature-settings:"kern" 1}
+    font-size:10pt;line-height:1.42;font-feature-settings:"kern" 1;
+    font-variant-ligatures:none}
   a{color:#0F766E;text-decoration:none}
   strong{color:#0F172A;font-weight:700}
   .header{border-bottom:2px solid #0D9488;padding-bottom:10px;margin-bottom:14px}
@@ -466,25 +447,22 @@ const css = `
   section{margin-top:13px}
   h2{font-size:9.2pt;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:#0D9488;
     border-bottom:1px solid #E2E8F0;padding-bottom:3px;margin-bottom:7px;break-after:avoid}
-  p{margin-bottom:5px;text-align:justify}
+  p{margin-bottom:5px}
   .about p:last-child{margin-bottom:0}
-  .chips{display:flex;flex-wrap:wrap;gap:5px}
-  .chip{font-size:8.3pt;background:#F0FDFA;color:#0F766E;border:1px solid #99F6E4;
-    border-radius:999px;padding:2px 8px;white-space:nowrap}
+  .chips{font-size:9pt;color:#0F766E;font-weight:600;line-height:1.5}
   .job{margin-bottom:11px;break-inside:avoid}
   .job + .job{padding-top:10px;border-top:1px solid #F1F5F9}
   .job__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
   .job__co{font-size:11.5pt;font-weight:800;color:#0F172A}
-  .job__unit{font-weight:600;color:#0D9488;font-size:9.5pt}
+  .job__unit{font-weight:600;color:#0D9488;font-size:9.2pt;margin-top:1px}
   .job__period{font-size:8.8pt;color:#475569;white-space:nowrap;font-weight:600}
   .job__role{font-size:9.7pt;font-weight:600;color:#334155;margin-top:1px}
   .job__meta{font-size:8.6pt;color:#64748B;margin-top:1px}
   .block{margin-top:6px;break-inside:avoid}
-  .block__label{font-size:8.4pt;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
-    color:#475569;margin-bottom:3px}
-  ul{list-style:none}
-  li{position:relative;padding-left:11px;margin-bottom:2.5px;text-align:justify}
-  li::before{content:"";position:absolute;left:1px;top:6px;width:3px;height:3px;border-radius:50%;background:#14B8A6}
+  .block__label{font-size:8.8pt;font-weight:700;color:#475569;margin-bottom:3px}
+  ul{list-style-type:"\\2022  ";padding-left:11px}
+  li{margin-bottom:2.5px;padding-left:2px}
+  li::marker{color:#14B8A6;font-size:.62em}
   .stack{margin-top:6px;font-size:8.6pt;color:#64748B;font-style:italic;line-height:1.4}
   .edu__row,.cert,.award{break-inside:avoid;margin-bottom:8px}
   .row__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
@@ -493,10 +471,12 @@ const css = `
   .row__sub{font-size:9pt;color:#475569;margin-top:1px}
   .row__text{font-size:9pt;margin-top:3px}
   .row__tags{font-size:8.3pt;color:#64748B;font-style:italic;margin-top:2px}
-  .skills__grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 22px}
-  .skill__row{font-size:9pt;break-inside:avoid;margin-bottom:1px}
+  .skills__grid{display:block}
+  .skill__row{font-size:9pt;break-inside:avoid;margin-bottom:2px}
   .skill__row b{color:#334155}
+  .brand{break-inside:avoid}
   .brand__links{font-size:9pt;margin-top:3px}
+  .nb{white-space:nowrap}
 `;
 
 // --------------------------------------------------------------------- render
@@ -524,21 +504,22 @@ function render(d) {
   const about = `<section class="about"><h2>${d.L.about}</h2>${
     d.about.map((p) => `<p>${inline(p)}</p>`).join('')}</section>`;
 
+  // Comma-separated, not visual chips: a flex row of pills leaves no delimiter
+  // in the PDF text layer, so ATS keyword extraction glues the terms together.
   const top = `<section><h2>${d.L.topSkills}</h2><div class="chips">${
-    d.topSkills.map((s) => `<span class="chip">${inline(s)}</span>`).join('')}</div></section>`;
+    d.topSkills.map((s) => inline(s)).join(', ')}</div></section>`;
 
   const exp = `<section><h2>${d.L.experience}</h2>${d.experience.map((j) => `
     <div class="job">
       <div class="job__top">
-        <div><span class="job__co"><a href="${j.href}">${inline(j.company)}</a></span> <span class="job__unit">— ${inline(j.unit)}</span></div>
+        <div class="job__co"><a href="${j.href}">${inline(j.company)}</a></div>
         <div class="job__period">${inline(j.period)}</div>
       </div>
+      <div class="job__unit">${inline(j.unit)}</div>
       <div class="job__role">${inline(j.role)}</div>
       <div class="job__meta">${inline(j.location)} · ${d.L.team}: ${inline(j.team)}</div>
       ${list(d.L.achievements, j.achievements)}
-      ${list(d.L.responsibilities, j.responsibilities)}
-      ${list(d.L.contributions, j.contributions)}
-      ${list(d.L.learnings, j.learnings)}
+      ${list(d.L.responsibilities, [...j.responsibilities, ...j.contributions])}
       <div class="stack"><b>${d.L.stack}:</b> ${inline(j.stack)}</div>
     </div>`).join('')}</section>`;
 
@@ -567,10 +548,10 @@ function render(d) {
       <div class="row__text">${inline(a.text)}</div>
     </div>`).join('')}</section>`;
 
-  const brand = `<section><h2>${d.L.brand}</h2><p>${inline(d.brand.text)}</p>
+  const brand = `<section class="brand"><h2>${d.L.brand}</h2><p>${inline(d.brand.text)}</p>
     <div class="brand__links">${d.brand.links.map((l) => `<a href="${l.href}">${inline(l.label)}</a>`).join(' · ')}</div></section>`;
 
-  return `<!doctype html><html><head><meta charset="utf-8"><title>${inline(d.name)} — CV</title>
+  return `<!doctype html><html lang="${d.lang}"><head><meta charset="utf-8"><title>${inline(d.name)} — CV</title>
     <style>${css}</style></head><body>
     ${head}${about}${top}${exp}${edu}${certs}${skills}${awards}${brand}
     </body></html>`;
