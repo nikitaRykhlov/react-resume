@@ -82,7 +82,7 @@ const en = {
     skills: 'Skills', awards: 'Honors & Awards', brand: 'Personal Brand', stack: 'Stack',
   },
   about: [
-    'Over 5 years of experience in software development, focused on building robust and scalable solutions that drive value across various industries. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time.',
+    'Over 7 years of experience in software development, focused on building robust and scalable solutions that drive value across various industries. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time.',
     'Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.',
     'I enjoy sharing knowledge and best practices, which is why I actively maintain and develop a technical blog. When entrusted with a task, I take full ownership and ensure timely delivery with high efficiency and quality, regardless of the project’s scope or audience.',
   ],
@@ -199,6 +199,17 @@ const en = {
       ],
       stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
+    {
+      company: 'Freelance', href: '', unit: '',
+      role: 'Software Developer', period: 'Oct 2019 — Sep 2020',
+      location: 'Remote', team: '', achievements: [],
+      responsibilities: [
+        'Developed Telegram bots for clients.',
+        'Built websites and landing pages for clients.',
+        'Wrote scripts to automate routine tasks.',
+      ],
+      contributions: [], stack: '',
+    },
   ],
   education: {
     degree: 'Computer and Information Systems Security / Information Assurance',
@@ -261,7 +272,7 @@ const ru = {
     skills: 'Навыки', awards: 'Награды и достижения', brand: 'Личный бренд', stack: 'Стек',
   },
   about: [
-    'Более 5 лет опыта в разработке ПО с фокусом на создании надёжных и масштабируемых решений, приносящих ценность в самых разных индустриях. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются.',
+    'Более 7 лет опыта в разработке ПО с фокусом на создании надёжных и масштабируемых решений, приносящих ценность в самых разных индустриях. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются.',
     'На протяжении карьеры я работал в крупных технологических компаниях с высокими стандартами, что помогло развить стратегическое мышление и способность создавать долговечные, эффективные решения. Помимо backend-разработки, у меня есть практический опыт во frontend, что позволяет подходить к проектам с full-stack перспективы.',
     'Мне нравится делиться знаниями и лучшими практиками, поэтому я активно веду технический блог. Когда мне поручают задачу, я беру на себя полную ответственность и обеспечиваю своевременную доставку с высокой эффективностью и качеством, независимо от масштаба проекта.',
   ],
@@ -377,6 +388,17 @@ const ru = {
         'Моделировал архитектуру с помощью UML и BPMN для ясности и согласованности.',
       ],
       stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
+    },
+    {
+      company: 'Фриланс', href: '', unit: '',
+      role: 'Разработчик', period: 'Окт 2019 — Сен 2020',
+      location: 'Удалённо', team: '', achievements: [],
+      responsibilities: [
+        'Разрабатывал Telegram-ботов для заказчиков.',
+        'Создавал сайты и лендинги для заказчиков.',
+        'Писал скрипты для автоматизации рутинных задач.',
+      ],
+      contributions: [], stack: '',
     },
   ],
   education: {
@@ -512,15 +534,15 @@ function render(d) {
   const exp = `<section><h2>${d.L.experience}</h2>${d.experience.map((j) => `
     <div class="job">
       <div class="job__top">
-        <div class="job__co"><a href="${j.href}">${inline(j.company)}</a></div>
+        <div class="job__co">${j.href ? `<a href="${j.href}">${inline(j.company)}</a>` : inline(j.company)}</div>
         <div class="job__period">${inline(j.period)}</div>
       </div>
-      <div class="job__unit">${inline(j.unit)}</div>
+      ${j.unit ? `<div class="job__unit">${inline(j.unit)}</div>` : ''}
       <div class="job__role">${inline(j.role)}</div>
-      <div class="job__meta">${inline(j.location)} · ${d.L.team}: ${inline(j.team)}</div>
+      <div class="job__meta">${inline(j.location)}${j.team ? ` · ${d.L.team}: ${inline(j.team)}` : ''}</div>
       ${list(d.L.achievements, j.achievements)}
       ${list(d.L.responsibilities, [...j.responsibilities, ...j.contributions])}
-      <div class="stack"><b>${d.L.stack}:</b> ${inline(j.stack)}</div>
+      ${j.stack ? `<div class="stack"><b>${d.L.stack}:</b> ${inline(j.stack)}</div>` : ''}
     </div>`).join('')}</section>`;
 
   const edu = `<section><h2>${d.L.education}</h2>

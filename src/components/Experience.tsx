@@ -41,14 +41,14 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
               <div className="exp-card__body-wrap" aria-hidden={!open}>
                 <div className="exp-card__body-inner">
                   <div className="exp-card__body">
-                    <div className="exp-hl-list">
+                    {item.highlights.length > 0 && <div className="exp-hl-list">
                       {item.highlights.map((h) => (
                         <div key={h.value + h.text} className="exp-hl">
                           <span className="exp-hl__value">{h.value}</span>
                           <span className="exp-hl__text">{h.text}</span>
                         </div>
                       ))}
-                    </div>
+                    </div>}
                     <p className="exp__resp-label">{t.ui.responsibilities}</p>
                     <ul className="exp__resp-list">
                       {item.details.map((d) => (
@@ -58,12 +58,12 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
                         </li>
                       ))}
                     </ul>
-                    <div className="exp__skills">
+                    {item.skills.length > 0 && <div className="exp__skills">
                       {item.skills.map((sk) => (
                         <span key={sk} className="chip">{sk}</span>
                       ))}
-                    </div>
-                    <div className="exp__team">{t.ui.team}: {item.unit} · {item.team}</div>
+                    </div>}
+                    {item.team && <div className="exp__team">{t.ui.team}: {item.unit} · {item.team}</div>}
                   </div>
                 </div>
               </div>

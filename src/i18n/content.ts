@@ -102,19 +102,19 @@ const en: Content = {
   hero: {
     status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
     tagline: 'I design and maintain high-load distributed systems where performance, reliability and fault tolerance come first.',
-    years: '5+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
+    years: '7+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
     location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
   },
   about: {
     title: 'I build systems meant to last.',
     paras: [
-      'Over five years of building robust, scalable solutions across different industries. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
+      'Over seven years of building robust, scalable solutions across different industries. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
       'I care about architectures that are scalable and flexible, but also easy to support and evolve over time. Years in large technology companies with rigorous standards gave me a strategic mindset and the habit of crafting long-lasting, efficient solutions.',
       'Alongside back-end work I have hands-on front-end experience, so I approach projects full-stack. When I take ownership of a task, I deliver on time, with high quality — whatever the scope.',
     ],
   },
   metrics: [
-    { value: '5+', label: 'years of experience' },
+    { value: '7+', label: 'years of experience' },
     { value: '4', label: 'product companies' },
     { value: '99.95%', label: 'uptime maintained' },
     { value: '88.1%', label: 'ad coverage built' },
@@ -178,6 +178,15 @@ const en: Content = {
           'Modeled architecture with UML and BPMN; set up CI/CD with Jenkins.',
         ], skills: rbsSkills,
       },
+      {
+        company: 'Freelance', role: 'Software Developer', location: 'Remote', period: 'Oct 2019 — Sep 2020', unit: '', team: '',
+        highlights: [],
+        details: [
+          'Developed Telegram bots for clients.',
+          'Built websites and landing pages for clients.',
+          'Wrote scripts to automate routine tasks.',
+        ], skills: [],
+      },
     ],
   },
   skills: {
@@ -236,19 +245,19 @@ const ru: Content = {
   hero: {
     status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
     tagline: 'Проектирую и поддерживаю высоконагруженные распределённые системы, где на первом месте производительность, надёжность и отказоустойчивость.',
-    years: '5+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
+    years: '7+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
     location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
   },
   about: {
     title: 'Создаю системы, которые живут долго.',
     paras: [
-      'Больше пяти лет строю надёжные масштабируемые решения в разных индустриях. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
+      'Больше семи лет строю надёжные масштабируемые решения в разных индустриях. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
       'Мне важны архитектуры, которые легко масштабировать и развивать, но при этом удобно поддерживать. Годы в крупных технологических компаниях со строгими стандартами дали стратегическое мышление и привычку делать долговечные эффективные решения.',
       'Помимо backend у меня есть практика на frontend, поэтому подхожу к проектам full-stack. Когда беру задачу — довожу её в срок и с высоким качеством, независимо от масштаба.',
     ],
   },
   metrics: [
-    { value: '5+', label: 'лет опыта' },
+    { value: '7+', label: 'лет опыта' },
     { value: '4', label: 'продуктовые компании' },
     { value: '99.95%', label: 'аптайм систем' },
     { value: '88.1%', label: 'покрытие рекламой' },
@@ -311,6 +320,15 @@ const ru: Content = {
           'Участвовал в системе ПДД SPECTR (PHP, MySQL).',
           'Моделировал архитектуру в UML и BPMN; настроил CI/CD на Jenkins.',
         ], skills: rbsSkills,
+      },
+      {
+        company: 'Фриланс', role: 'Разработчик', location: 'Удалённо', period: 'Окт 2019 — Сен 2020', unit: '', team: '',
+        highlights: [],
+        details: [
+          'Разрабатывал Telegram-ботов для заказчиков.',
+          'Создавал сайты и лендинги для заказчиков.',
+          'Писал скрипты для автоматизации рутинных задач.',
+        ], skills: [],
       },
     ],
   },
