@@ -284,7 +284,7 @@ Golang, Software Development, Programming Languages
 
 **Backend Runtime:** Node.js
 
-**Frontend Development:** HTML, CSS, React, Angular
+**Frontend Development:** HTML, CSS, React, Angular, SASS
 
 **Storages:** PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3, Google Cloud Storage (GCS), MongoDB
 
@@ -308,7 +308,7 @@ Golang, Software Development, Programming Languages
 
 **Reliability & SRE:** SLO, SLA, Alerting, Incident Management, Postmortems, On-call, Disaster Recovery, Capacity Planning, Load Testing, Fault Tolerance Testing, Zero-Downtime Deployments
 
-**Design Methodologies & Principles:** Software Architecture, Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems, Retries & Backoff, Circuit Breakers, Backpressure, Deduplication
+**Design Methodologies & Principles:** Software Architecture, Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems, Retries & Backoff, Circuit Breakers, Backpressure, Deduplication, FSD
 
 **Development Practices:** Test-Driven Development (TDD)
 
@@ -320,7 +320,7 @@ Golang, Software Development, Programming Languages
 
 **Project Management:** Jira
 
-**Modeling & Documentation:** UML, BPMN, C4, Mermaid
+**Modeling & Documentation:** UML, BPMN, C4, Mermaid, Postman
 
 **Cloud & Other:** Google Cloud Platform, Figma
 
@@ -348,7 +348,7 @@ Achieved 97% test coverage through rigorous Test-Driven Development (TDD) practi
 
 *Issued by ELMA365*
 
-Recognized for reducing document generation time by 25.5% , significantly improving operational efficiency. Optimized backend workflows and implemented performance enhancements using Golang and microservices architecture.
+Recognized for reducing document generation time by 25.5%, significantly improving operational efficiency. Optimized backend workflows and implemented performance enhancements using Golang and microservices architecture.
 
 ## Personal Brand
 
