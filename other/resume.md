@@ -6,7 +6,7 @@ Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workfl
 
 ## About
 
-Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time. I use coding agents such as Codex and Claude Code while remaining hands-on with implementation, debugging and code review.
+Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time. I take an AI-native approach to software development, guiding AI agents from design through implementation and validation while owning architecture, code quality, and production reliability.
 
 Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.
 
