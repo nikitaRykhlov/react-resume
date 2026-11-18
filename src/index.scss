@@ -708,6 +708,15 @@ main { position: relative; z-index: 2; }
   color: var(--text-muted);
 }
 .skill-card__chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+.skill-card__chips .chip {
+  max-width: 100%;
+  height: auto;
+  min-height: 28px;
+  padding: 5px 11px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
 
 /* ---------- Awards ---------- */
 .award-card {
