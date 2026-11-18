@@ -207,6 +207,7 @@ const en = {
         'Developed Telegram bots for clients.',
         'Built websites and landing pages for clients.',
         'Wrote scripts to automate routine tasks.',
+        'Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.',
       ],
       contributions: [], stack: '',
     },
@@ -397,6 +398,7 @@ const ru = {
         'Разрабатывал Telegram-ботов для заказчиков.',
         'Создавал сайты и лендинги для заказчиков.',
         'Писал скрипты для автоматизации рутинных задач.',
+        'Совмещал фриланс с обучением, закрепляя теоретические знания на практике.',
       ],
       contributions: [], stack: '',
     },
@@ -475,7 +477,8 @@ const css = `
   .job{margin-bottom:11px;break-inside:avoid}
   .job + .job{padding-top:10px;border-top:1px solid #F1F5F9}
   .job__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-  .job__co{font-size:11.5pt;font-weight:800;color:#0F172A}
+  .job__co{font-size:11.5pt;font-weight:800;color:#0F766E}
+  .job__co a{color:inherit}
   .job__unit{font-weight:600;color:#0D9488;font-size:9.2pt;margin-top:1px}
   .job__period{font-size:8.8pt;color:#475569;white-space:nowrap;font-weight:600}
   .job__role{font-size:9.7pt;font-weight:600;color:#334155;margin-top:1px}
