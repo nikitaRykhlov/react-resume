@@ -119,7 +119,7 @@ const en = {
         'Developed a delivery orchestrator and a state-tracking tool for observability.',
         'Adopted AI-assisted development tooling (Cursor, Claude Code, GitHub Spec Kit, OpenCode, MCP) to speed up prototyping, spec-driven workflows and delivery.',
       ],
-      stack: 'Microservices, Golang, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
+      stack: 'Microservices, Golang, Python, Apache Airflow, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'Kuper', href: 'https://www.linkedin.com/company/kuper-ru/', unit: 'B2B · Growth & Engagement',
@@ -198,7 +198,7 @@ const en = {
         'Utilized Jenkins for CI/CD pipelines, ensuring smooth workflows.',
         'Modeled architecture with UML and BPMN for clarity and alignment.',
       ],
-      stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
+      stack: 'Golang, Node.js, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
     {
       company: 'Freelance', href: '', unit: '',
@@ -210,7 +210,7 @@ const en = {
         'Wrote scripts to automate routine tasks.',
         'Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.',
       ],
-      contributions: [], stack: '',
+      contributions: [], stack: 'C#, Python, Node.js, HTML, CSS, Bash',
     },
   ],
   education: {
@@ -226,17 +226,18 @@ const en = {
   skills: [
     { label: 'Domain Expertise', items: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms' },
     { label: 'Languages', items: 'English (Professional working proficiency), Russian (native)' },
-    { label: 'Programming Languages', items: 'Go (Golang), JavaScript, TypeScript, PHP' },
+    { label: 'Programming Languages', items: 'Go (Golang), JavaScript, TypeScript, PHP, C#, Python, Bash' },
+    { label: 'Backend Runtime', items: 'Node.js' },
     { label: 'Frontend Development', items: 'HTML, CSS, React, Angular' },
-    { label: 'Storages', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3' },
+    { label: 'Storages', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3, Google Cloud Storage (GCS)' },
     { label: 'Search & Ranking', items: 'Search Relevance, Ranking, Information Retrieval, Recommendation Systems, Personalization, Embeddings, A/B Testing, Experimentation' },
     { label: 'Version Control', items: 'Git, GitLab' },
-    { label: 'Infrastructure & Orchestration', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx' },
+    { label: 'Infrastructure & Orchestration', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx, Apache Airflow' },
     { label: 'APIs & Communication', items: 'REST API, gRPC, Protocol Buffers (protobuf), OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0' },
-    { label: 'Messaging Systems', items: 'Kafka, WebSockets' },
+    { label: 'Messaging Systems', items: 'Kafka, Google Cloud Pub/Sub, WebSockets' },
     { label: 'Observability & Monitoring', items: 'Prometheus, Grafana, VictoriaMetrics, Datadog, OpenTelemetry, Jaeger, Loki, Graylog, Kibana, Sentry' },
     { label: 'Reliability & SRE', items: 'SLO, SLA, Alerting, Incident Management, Postmortems, On-call, Disaster Recovery, Capacity Planning' },
-    { label: 'Design Methodologies & Principles', items: 'Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
+    { label: 'Design Methodologies & Principles', items: 'Software Architecture, Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
     { label: 'Development Practices', items: 'Test-Driven Development (TDD)' },
     { label: 'Leadership & Collaboration', items: 'Technical Leadership, Mentoring, System Design, Code Review, Hiring, Technical Interviewing, Stakeholder Management, Agile' },
     { label: 'AI-Assisted Development', items: 'Cursor, Claude Code, GitHub Spec Kit, Claude Design, OpenCode, Model Context Protocol (MCP), Claude Skills' },
@@ -312,7 +313,7 @@ const ru = {
         'Разработал оркестратор доставки и инструмент отслеживания состояния для наблюдаемости.',
         'Внедрил инструменты AI-разработки (Cursor, Claude Code, GitHub Spec Kit, OpenCode, MCP) для ускорения прототипирования, spec-driven процессов и доставки.',
       ],
-      stack: 'Microservices, Golang, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
+      stack: 'Microservices, Golang, Python, Apache Airflow, Elasticsearch, PostgreSQL, GCP, GCS, Pub/Sub, Redis, Kubernetes, Scalability, Software Architecture, REST API, gRPC, DDD, High Availability, Distributed Systems, Observability, Datadog, OpenTelemetry, TDD, GitLab, Jira',
     },
     {
       company: 'Kuper', href: 'https://www.linkedin.com/company/kuper-ru/', unit: 'B2B · Рост и вовлечение',
@@ -391,7 +392,7 @@ const ru = {
         'Использовал Jenkins для CI/CD пайплайнов, обеспечивая бесперебойные процессы.',
         'Моделировал архитектуру с помощью UML и BPMN для ясности и согласованности.',
       ],
-      stack: 'Golang, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
+      stack: 'Golang, Node.js, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
     {
       company: 'Фриланс', href: '', unit: '',
@@ -403,7 +404,7 @@ const ru = {
         'Писал скрипты для автоматизации рутинных задач.',
         'Совмещал фриланс с обучением, закрепляя теоретические знания на практике.',
       ],
-      contributions: [], stack: '',
+      contributions: [], stack: 'C#, Python, Node.js, HTML, CSS, Bash',
     },
   ],
   education: {
@@ -419,17 +420,18 @@ const ru = {
   skills: [
     { label: 'Доменная экспертиза', items: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы' },
     { label: 'Языки', items: 'Английский (Professional working proficiency), Русский (родной)' },
-    { label: 'Языки программирования', items: 'Go (Golang), JavaScript, TypeScript, PHP' },
+    { label: 'Языки программирования', items: 'Go (Golang), JavaScript, TypeScript, PHP, C#, Python, Bash' },
+    { label: 'Среда выполнения backend', items: 'Node.js' },
     { label: 'Frontend-разработка', items: 'HTML, CSS, React, Angular' },
-    { label: 'Хранилища', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3' },
+    { label: 'Хранилища', items: 'PostgreSQL, Elasticsearch, OpenSearch, MySQL, Redis, S3, Google Cloud Storage (GCS)' },
     { label: 'Поиск и ранжирование', items: 'Search Relevance, Ranking, Information Retrieval, Recommendation Systems, Personalization, Embeddings, A/B Testing, Experimentation' },
     { label: 'Контроль версий', items: 'Git, GitLab' },
-    { label: 'Инфраструктура и оркестрация', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx' },
+    { label: 'Инфраструктура и оркестрация', items: 'Docker, Kubernetes, Helm, Infrastructure as Code (IaC), ArgoCD, Nginx, Apache Airflow' },
     { label: 'API и коммуникация', items: 'REST API, gRPC, Protocol Buffers (protobuf), OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0' },
-    { label: 'Системы обмена сообщениями', items: 'Kafka, WebSockets' },
+    { label: 'Системы обмена сообщениями', items: 'Kafka, Google Cloud Pub/Sub, WebSockets' },
     { label: 'Observability и мониторинг', items: 'Prometheus, Grafana, VictoriaMetrics, Datadog, OpenTelemetry, Jaeger, Loki, Graylog, Kibana, Sentry' },
     { label: 'Надёжность и SRE', items: 'SLO, SLA, Alerting, Incident Management, Postmortems, On-call, Disaster Recovery, Capacity Planning' },
-    { label: 'Методологии и принципы проектирования', items: 'Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
+    { label: 'Методологии и принципы проектирования', items: 'Software Architecture, Domain-Driven Design (DDD), Clean Architecture, CQRS, Outbox Pattern, Idempotency, Rate Limiting, Event-Driven Architecture, Microservices, Scalability, High Availability, Distributed Systems' },
     { label: 'Практики разработки', items: 'Test-Driven Development (TDD)' },
     { label: 'Лидерство и взаимодействие', items: 'Technical Leadership, Mentoring, System Design, Code Review, Hiring, Technical Interviewing, Stakeholder Management, Agile' },
     { label: 'AI-разработка', items: 'Cursor, Claude Code, GitHub Spec Kit, Claude Design, OpenCode, Model Context Protocol (MCP), Claude Skills' },
@@ -472,6 +474,9 @@ const css = `
   .domains{margin-top:7px;font-size:8.5pt;line-height:1.5;color:#0F766E}
   .contacts{margin-top:8px;font-size:8.6pt;color:#475569;display:flex;flex-wrap:wrap;gap:4px 0}
   .contacts span{white-space:nowrap}
+  /* Keep the email in one uniformly spaced text run, including its underscore. */
+  .contact-email{display:inline-block;white-space:nowrap;font-family:Arial,sans-serif;
+    font-kerning:none;font-feature-settings:"kern" 0;font-variant-ligatures:none}
   .contacts .sep{margin:0 8px;color:#CBD5E1}
   section{margin-top:13px}
   h2{font-size:9.2pt;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:#0D9488;
@@ -479,7 +484,9 @@ const css = `
   p{margin-bottom:5px}
   .about p:last-child{margin-bottom:0}
   .chips{font-size:9pt;color:#0F766E;font-weight:600;line-height:1.5}
-  .job{margin-bottom:11px;break-inside:avoid}
+  /* Allow long jobs to flow across pages; keep only headings and individual bullets together. */
+  .job{margin-bottom:11px}
+  .job__heading{break-inside:avoid;break-after:avoid}
   .job + .job{padding-top:10px;border-top:1px solid #F1F5F9}
   .job__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
   .job__co{font-size:11.5pt;font-weight:800;color:#0F766E}
@@ -488,10 +495,10 @@ const css = `
   .job__period{font-size:8.8pt;color:#475569;white-space:nowrap;font-weight:600}
   .job__role{font-size:9.7pt;font-weight:600;color:#334155;margin-top:1px}
   .job__meta{font-size:8.6pt;color:#64748B;margin-top:1px}
-  .block{margin-top:6px;break-inside:avoid}
-  .block__label{font-size:8.8pt;font-weight:700;color:#475569;margin-bottom:3px}
+  .block{margin-top:6px}
+  .block__label{font-size:8.8pt;font-weight:700;color:#475569;margin-bottom:3px;break-after:avoid}
   ul{list-style-type:"\\2022  ";padding-left:11px}
-  li{margin-bottom:2.5px;padding-left:2px}
+  li{margin-bottom:2.5px;padding-left:2px;break-inside:avoid}
   li::marker{color:#14B8A6;font-size:.62em}
   .stack{margin-top:6px;font-size:8.6pt;color:#64748B;font-style:italic;line-height:1.4}
   .edu__row,.cert,.award{break-inside:avoid;margin-bottom:8px}
@@ -525,7 +532,7 @@ function render(d) {
       <div class="contacts">
         <span><a href="${d.website.href}">${d.website.label}</a></span><span class="sep">·</span>
         <span><a href="${d.phone.href}">${d.phone.label}</a></span><span class="sep">·</span>
-        <span><a href="mailto:${d.email}">${d.email}</a></span><span class="sep">·</span>
+        <span><a class="contact-email" href="mailto:${d.email}">${d.email}</a></span><span class="sep">·</span>
         <span><a href="${d.linkedin.href}">${d.linkedin.label}</a></span><span class="sep">·</span>
         <span><a href="${d.github.href}">${d.github.label}</a></span><span class="sep">·</span>
         <span>${d.timezone}</span>
@@ -542,6 +549,7 @@ function render(d) {
 
   const exp = `<section><h2>${d.L.experience}</h2>${d.experience.map((j) => `
     <div class="job">
+      <div class="job__heading">
       <div class="job__top">
         <div class="job__co">${j.href ? `<a href="${j.href}">${inline(j.company)}</a>` : inline(j.company)}</div>
         <div class="job__period">${inline(j.period)}</div>
@@ -549,6 +557,7 @@ function render(d) {
       ${j.unit ? `<div class="job__unit">${inline(j.unit)}</div>` : ''}
       <div class="job__role">${inline(j.role)}</div>
       <div class="job__meta">${inline(j.location)}${j.team ? ` · ${d.L.team}: ${inline(j.team)}` : ''}</div>
+      </div>
       ${list(d.L.achievements, j.achievements)}
       ${list(d.L.responsibilities, [...j.responsibilities, ...j.contributions])}
       ${j.stack ? `<div class="stack"><b>${d.L.stack}:</b> ${inline(j.stack)}</div>` : ''}

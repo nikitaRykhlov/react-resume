@@ -90,10 +90,10 @@ export const socials: Social[] = [
   { href: 'https://x.com/NikitaRykhlov', label: 'X', icon: 'x' },
 ];
 
-const tabbySkills = ['Golang', 'Elasticsearch', 'Microservices', 'PostgreSQL', 'GCP', 'GCS', 'Pub/Sub', 'Redis', 'Kubernetes', 'Software Architecture', 'REST API', 'gRPC', 'DDD', 'High Availability', 'Distributed Systems', 'Datadog', 'OpenTelemetry', 'TDD'];
+const tabbySkills = ['Golang', 'Python', 'Apache Airflow', 'Elasticsearch', 'Microservices', 'PostgreSQL', 'GCP', 'GCS', 'Pub/Sub', 'Redis', 'Kubernetes', 'Software Architecture', 'REST API', 'gRPC', 'DDD', 'High Availability', 'Distributed Systems', 'Datadog', 'OpenTelemetry', 'TDD'];
 const kuperSkills = ['Microservices', 'PostgreSQL', 'Kubernetes', 'S3', 'Redis', 'Kafka', 'Scalability', 'Software Architecture', 'REST API', 'gRPC', 'DDD', 'Golang', 'High Availability', 'Distributed Systems', 'Grafana', 'VictoriaMetrics', 'Kibana', 'Jaeger', 'Sentry', 'OpenTelemetry', 'TDD', 'GitLab'];
 const elmaSkills = ['Golang', 'Kubernetes', 'Angular', 'Distributed Systems', 'High Availability', 'Scalability', 'Microservices', 'REST API', 'S3', 'Redis', 'Grafana', 'Prometheus', 'Loki', 'Jaeger', 'TDD', 'GitLab'];
-const rbsSkills = ['Golang', 'REST API', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSockets', 'React.js', 'Docker', 'PHP', 'Prometheus', 'Grafana', 'Graylog', 'Jaeger', 'Full Stack'];
+const rbsSkills = ['Golang', 'Node.js', 'REST API', 'gRPC', 'Jenkins', 'MySQL', 'UML', 'BPMN', 'WebSockets', 'React.js', 'Docker', 'PHP', 'Prometheus', 'Grafana', 'Graylog', 'Jaeger', 'Full Stack'];
 const eduSkills = ['Information Security', 'Network Security', 'Golang', 'Algorithms', 'Data Structures'];
 
 const en: Content = {
@@ -192,7 +192,7 @@ const en: Content = {
           'Built websites and landing pages for clients.',
           'Wrote scripts to automate routine tasks.',
           'Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.',
-        ], skills: [],
+        ], skills: ['C#', 'Python', 'Node.js', 'HTML', 'CSS', 'Bash'],
       },
     ],
   },
@@ -201,11 +201,11 @@ const en: Content = {
     items: [
       { name: 'Domain Expertise', desc: 'Building product systems spanning search and personalized recommendations, B2B commerce, and business process automation.', chips: ['Search & Recommendations', 'Personalization', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
       { name: 'Languages', desc: 'English and Russian — comfortable with professional communication, technical writing and documentation.', chips: ['English', 'Russian'] },
-      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
+      { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'C#', 'Python', 'Node.js', 'PHP', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
       { name: 'Search & Ranking', desc: 'Large-scale search, ranking and recommendation systems: relevance tuning, blending multiple sources into one feed, and running experiments over it.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
       { name: 'Front End', desc: 'User interfaces with clean structure, responsive design and a smooth experience; complex frontend logic integrated with backends.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
       { name: 'Development', desc: 'Architecting complex systems with maintainability, scalability and clean-code practices at the core.', chips: ['Software Architecture', 'DDD', 'Clean Architecture', 'CQRS', 'Outbox Pattern', 'Idempotency', 'Rate Limiting', 'Event-Driven Architecture', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps & Cloud', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and running infrastructure on the cloud with a focus on automation and reliability.', chips: ['Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'DevOps & Cloud', desc: 'Building and maintaining CI/CD pipelines, containerizing apps and running infrastructure on the cloud with a focus on automation and reliability.', chips: ['Bash', 'Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GCS', 'Pub/Sub', 'Apache Airflow', 'GitLab CI/CD', 'Jenkins'] },
       { name: 'Observability & Reliability', desc: 'Metrics, logs and distributed tracing across services — dashboards, alerting and early incident detection that cut time to diagnosis.', chips: ['Prometheus', 'Grafana', 'VictoriaMetrics', 'Datadog', 'OpenTelemetry', 'Jaeger', 'Loki', 'Graylog', 'Kibana', 'Sentry', 'SLO', 'Alerting', 'Incident Management', 'Postmortems', 'On-call', 'Disaster Recovery'] },
       { name: 'AI-Assisted Development', desc: 'Speeding up prototyping, spec-driven workflows and delivery with modern AI development tooling.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
       { name: 'Leadership', desc: 'Owning solution architecture end to end, growing engineers through mentoring and code review, and aligning technical decisions with business goals.', chips: ['Technical Leadership', 'Mentoring', 'System Design', 'Code Review', 'Hiring', 'Technical Interviewing', 'Stakeholder Management', 'Agile'] },
@@ -343,7 +343,7 @@ const ru: Content = {
           'Создавал сайты и лендинги для заказчиков.',
           'Писал скрипты для автоматизации рутинных задач.',
           'Совмещал фриланс с обучением, закрепляя теоретические знания на практике.',
-        ], skills: [],
+        ], skills: ['C#', 'Python', 'Node.js', 'HTML', 'CSS', 'Bash'],
       },
     ],
   },
@@ -352,11 +352,11 @@ const ru: Content = {
     items: [
       { name: 'Доменная экспертиза', desc: 'Разработка продуктовых систем: от поиска и персонализированных рекомендаций до B2B-коммерции и автоматизации бизнес-процессов.', chips: ['Поиск и рекомендации', 'Персонализация', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
       { name: 'Языки', desc: 'Английский и русский — свободно для профессионального общения, технической переписки и документации.', chips: ['Английский', 'Русский'] },
-      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
+      { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'C#', 'Python', 'Node.js', 'PHP', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
       { name: 'Поиск и ранжирование', desc: 'Крупномасштабный поиск, ранжирование и рекомендации: настройка релевантности, смешивание источников в единую выдачу и эксперименты над ней.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
       { name: 'Front End', desc: 'Интерфейсы с чистой структурой, адаптивной вёрсткой и плавным UX; сложная frontend-логика в связке с backend.', chips: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SASS'] },
       { name: 'Разработка', desc: 'Проектирование сложных систем с упором на поддерживаемость, масштабируемость и чистый код.', chips: ['Software Architecture', 'DDD', 'Clean Architecture', 'CQRS', 'Outbox Pattern', 'Idempotency', 'Rate Limiting', 'Event-Driven Architecture', 'FSD', 'Microservices', 'Scalability', 'High Availability', 'Distributed Systems', 'TDD'] },
-      { name: 'DevOps и облако', desc: 'CI/CD-пайплайны, контейнеризация и инфраструктура в облаке с упором на автоматизацию и надёжность.', chips: ['Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GitLab CI/CD', 'Jenkins'] },
+      { name: 'DevOps и облако', desc: 'CI/CD-пайплайны, контейнеризация и инфраструктура в облаке с упором на автоматизацию и надёжность.', chips: ['Bash', 'Kubernetes', 'Docker', 'Helm', 'IaC', 'ArgoCD', 'Nginx', 'GCP', 'GCS', 'Pub/Sub', 'Apache Airflow', 'GitLab CI/CD', 'Jenkins'] },
       { name: 'Observability и надёжность', desc: 'Метрики, логи и распределённая трассировка по сервисам — дашборды, алертинг и раннее обнаружение инцидентов.', chips: ['Prometheus', 'Grafana', 'VictoriaMetrics', 'Datadog', 'OpenTelemetry', 'Jaeger', 'Loki', 'Graylog', 'Kibana', 'Sentry', 'SLO', 'Alerting', 'Incident Management', 'Postmortems', 'On-call', 'Disaster Recovery'] },
       { name: 'AI-разработка', desc: 'Ускоряю прототипирование, spec-driven процессы и доставку с помощью современных AI-инструментов разработки.', chips: ['Claude Code', 'Cursor', 'GitHub Spec Kit', 'OpenCode', 'MCP', 'Claude Skills'] },
       { name: 'Лидерство', desc: 'Владение архитектурой решения от начала до конца, развитие инженеров через менторство и код-ревью, увязка технических решений с целями бизнеса.', chips: ['Technical Leadership', 'Mentoring', 'System Design', 'Code Review', 'Hiring', 'Technical Interviewing', 'Stakeholder Management', 'Agile'] },
