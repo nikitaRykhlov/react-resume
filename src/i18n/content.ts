@@ -114,7 +114,7 @@ const en: Content = {
   about: {
     title: 'I build systems meant to last.',
     paras: [
-      'Over 7 years of software development experience across e-commerce at Kuper, search and recommendations at Tabby, and workflow automation at ELMA365. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
+      'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
       'I care about architectures that are scalable and flexible, but also easy to support and evolve over time. Years in large technology companies with rigorous standards gave me a strategic mindset and the habit of crafting long-lasting, efficient solutions.',
       'Alongside back-end work I have hands-on front-end experience, so I approach projects full-stack. When I take ownership of a task, I deliver on time, with high quality — whatever the scope.',
     ],
@@ -265,7 +265,7 @@ const ru: Content = {
   about: {
     title: 'Создаю системы, которые живут долго.',
     paras: [
-      'Более 7 лет опыта в разработке ПО: e-commerce-системы в Kuper, поиск и рекомендации в Tabby, функциональность платформы автоматизации бизнес-процессов в ELMA365. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
+      'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
       'Мне важны архитектуры, которые легко масштабировать и развивать, но при этом удобно поддерживать. Годы в крупных технологических компаниях со строгими стандартами дали стратегическое мышление и привычку делать долговечные эффективные решения.',
       'Помимо backend у меня есть практика на frontend, поэтому подхожу к проектам full-stack. Когда беру задачу — довожу её в срок и с высоким качеством, независимо от масштаба.',
     ],
