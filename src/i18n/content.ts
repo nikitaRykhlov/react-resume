@@ -66,7 +66,7 @@ export interface Content {
   hero: {
     status: string; role: string; first: string; last: string; tagline: string;
     years: string; yearsLabel: string; ctaPrimary: string; ctaSecondary: string;
-    location: string; mainSkills: string[];
+    location: string; domains: string[]; mainSkills: string[];
   };
   about: { title: string; paras: string[] };
   metrics: { value: string; label: string }[];
@@ -102,13 +102,19 @@ const en: Content = {
   hero: {
     status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
     tagline: 'I design and maintain high-load distributed systems where performance, reliability and fault tolerance come first.',
+    mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
+    domains: [
+      'Search, Recommendations & Personalization',
+      'E-commerce & B2B Commerce',
+      'Workflow Automation & Low-code Platforms',
+    ],
     years: '7+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
-    location: 'Tbilisi · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
+    location: 'Tbilisi · UTC+04:00',
   },
   about: {
     title: 'I build systems meant to last.',
     paras: [
-      'Over seven years of building robust, scalable solutions across different industries. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
+      'Over 7 years of software development experience across e-commerce at Kuper, search and recommendations at Tabby, and workflow automation at ELMA365. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
       'I care about architectures that are scalable and flexible, but also easy to support and evolve over time. Years in large technology companies with rigorous standards gave me a strategic mindset and the habit of crafting long-lasting, efficient solutions.',
       'Alongside back-end work I have hands-on front-end experience, so I approach projects full-stack. When I take ownership of a task, I deliver on time, with high quality — whatever the scope.',
     ],
@@ -158,7 +164,7 @@ const en: Content = {
           { value: '97%', text: 'test coverage, reducing runtime errors and improving stability' },
         ],
         details: [
-          'Designed a document templating platform with Golang, Angular and microservices.',
+          'Developed document generation and templating capabilities within a low-code business process automation platform using Golang, Angular and microservices.',
           'Orchestrated containers with Kubernetes for fault tolerance and scalability.',
           'Integrated Redis caching and S3 storage to boost performance.',
           'Applied TDD across unit, integration and e2e tests; mentored juniors.',
@@ -246,13 +252,19 @@ const ru: Content = {
   hero: {
     status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
     tagline: 'Проектирую и поддерживаю высоконагруженные распределённые системы, где на первом месте производительность, надёжность и отказоустойчивость.',
+    mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
+    domains: [
+      'Поиск, рекомендации и персонализация',
+      'Электронная коммерция и B2B',
+      'Автоматизация бизнес-процессов и low-code-платформы',
+    ],
     years: '7+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
-    location: 'Тбилиси · UTC+04:00', mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
+    location: 'Тбилиси · UTC+04:00',
   },
   about: {
     title: 'Создаю системы, которые живут долго.',
     paras: [
-      'Больше семи лет строю надёжные масштабируемые решения в разных индустриях. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
+      'Более 7 лет опыта в разработке ПО: e-commerce-системы в Kuper, поиск и рекомендации в Tabby, функциональность платформы автоматизации бизнес-процессов в ELMA365. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
       'Мне важны архитектуры, которые легко масштабировать и развивать, но при этом удобно поддерживать. Годы в крупных технологических компаниях со строгими стандартами дали стратегическое мышление и привычку делать долговечные эффективные решения.',
       'Помимо backend у меня есть практика на frontend, поэтому подхожу к проектам full-stack. Когда беру задачу — довожу её в срок и с высоким качеством, независимо от масштаба.',
     ],
@@ -302,7 +314,7 @@ const ru: Content = {
           { value: '97%', text: 'покрытие тестами — меньше ошибок и выше стабильность' },
         ],
         details: [
-          'Спроектировал платформу шаблонов документов на Golang, Angular и микросервисах.',
+          'Разрабатывал функциональность генерации документов и шаблонов в составе low-code-платформы автоматизации бизнес-процессов на Golang, Angular и микросервисах.',
           'Оркестрировал контейнеры в Kubernetes для отказоустойчивости и масштабируемости.',
           'Внедрил кеш Redis и хранилище S3 для роста производительности.',
           'Применял TDD на всех уровнях тестов; менторил junior-разработчиков.',

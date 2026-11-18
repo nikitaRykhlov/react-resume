@@ -75,6 +75,7 @@ const shared = {
 const en = {
   ...shared,
   lang: 'en',
+  domains: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms',
   L: {
     about: 'About', topSkills: 'Top Skills', experience: 'Experience',
     achievements: 'Key Achievements', responsibilities: 'Responsibilities & Technical Contributions',
@@ -82,7 +83,7 @@ const en = {
     skills: 'Skills', awards: 'Honors & Awards', brand: 'Personal Brand', stack: 'Stack',
   },
   about: [
-    'Over 7 years of experience in software development, focused on building robust and scalable solutions that drive value across various industries. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time.',
+    'Over 7 years of software development experience across e-commerce at Kuper, search and recommendations at Tabby, and workflow automation at ELMA365. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time.',
     'Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.',
     'I enjoy sharing knowledge and best practices, which is why I actively maintain and develop a technical blog. When entrusted with a task, I take full ownership and ensure timely delivery with high efficiency and quality, regardless of the project’s scope or audience.',
   ],
@@ -158,7 +159,7 @@ const en = {
         'Automated document management processes, addressing critical business needs.',
       ],
       responsibilities: [
-        'Designed and built a document templating platform using Golang, Angular and microservices architecture.',
+        'Developed document generation and templating capabilities within a low-code business process automation platform using Golang, Angular and microservices.',
         'Optimized workflows by identifying bottlenecks and implementing performance improvements.',
         'Ensured code quality through TDD, covering unit, integration and end-to-end tests.',
         'Developed a user-friendly UI/UX with smooth backend integration for optimal interactions.',
@@ -265,6 +266,7 @@ const en = {
 const ru = {
   ...shared,
   lang: 'ru',
+  domains: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы',
   roleLine: 'Tech Lead · Feature Lead · Senior Backend Developer',
   L: {
     about: 'О себе', topSkills: 'Ключевые навыки', experience: 'Опыт работы',
@@ -273,7 +275,7 @@ const ru = {
     skills: 'Навыки', awards: 'Награды и достижения', brand: 'Личный бренд', stack: 'Стек',
   },
   about: [
-    'Более 7 лет опыта в разработке ПО с фокусом на создании надёжных и масштабируемых решений, приносящих ценность в самых разных индустриях. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются.',
+    'Более 7 лет опыта в разработке ПО: e-commerce-системы в Kuper, поиск и рекомендации в Tabby, функциональность платформы автоматизации бизнес-процессов в ELMA365. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются.',
     'На протяжении карьеры я работал в крупных технологических компаниях с высокими стандартами, что помогло развить стратегическое мышление и способность создавать долговечные, эффективные решения. Помимо backend-разработки, у меня есть практический опыт во frontend, что позволяет подходить к проектам с full-stack перспективы.',
     'Мне нравится делиться знаниями и лучшими практиками, поэтому я активно веду технический блог. Когда мне поручают задачу, я беру на себя полную ответственность и обеспечиваю своевременную доставку с высокой эффективностью и качеством, независимо от масштаба проекта.',
   ],
@@ -349,7 +351,7 @@ const ru = {
         'Автоматизировал процессы управления документами, закрыв критичные бизнес-потребности.',
       ],
       responsibilities: [
-        'Спроектировал и построил платформу шаблонизации документов на Golang, Angular и микросервисной архитектуре.',
+        'Разрабатывал функциональность генерации документов и шаблонов в составе low-code-платформы автоматизации бизнес-процессов на Golang, Angular и микросервисах.',
         'Оптимизировал рабочие процессы, выявляя боттлнеки и внедряя улучшения производительности.',
         'Обеспечивал качество кода через TDD, покрывая unit-, интеграционные и end-to-end тесты.',
         'Разрабатывал удобный UI/UX с плавной интеграцией с backend.',
@@ -465,6 +467,7 @@ const css = `
   .header{border-bottom:2px solid #0D9488;padding-bottom:10px;margin-bottom:14px}
   .name{font-size:23pt;font-weight:800;letter-spacing:-.4px;color:#0F172A;line-height:1.05}
   .role{font-size:11pt;font-weight:600;color:#0D9488;margin-top:3px}
+  .domains{margin-top:7px;font-size:8.5pt;line-height:1.5;color:#0F766E}
   .contacts{margin-top:8px;font-size:8.6pt;color:#475569;display:flex;flex-wrap:wrap;gap:4px 0}
   .contacts span{white-space:nowrap}
   .contacts .sep{margin:0 8px;color:#CBD5E1}
@@ -516,6 +519,7 @@ function render(d) {
     <div class="header">
       <div class="name">${inline(d.name)}</div>
       <div class="role">${inline(d.roleLine)}</div>
+      <div class="domains">${inline(d.domains)}</div>
       <div class="contacts">
         <span><a href="${d.website.href}">${d.website.label}</a></span><span class="sep">·</span>
         <span><a href="${d.phone.href}">${d.phone.label}</a></span><span class="sep">·</span>

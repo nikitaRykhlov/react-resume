@@ -35,7 +35,13 @@ const Hero: React.FC<HeroProps> = ({ t, lang, theme, socials }) => {
           </h1>
           <p className="hero__tagline">{t.hero.tagline}</p>
 
-          <div className="chips hero__chips">
+          <div className="chips hero__chips hero__domains">
+            {t.hero.domains.map((chip) => (
+              <span key={chip} className="chip chip--hero chip--domain">{chip}</span>
+            ))}
+          </div>
+
+          <div className="chips hero__chips hero__tech">
             {t.hero.mainSkills.map((chip) => (
               <span key={chip} className="chip chip--hero">{chip}</span>
             ))}
