@@ -28,7 +28,14 @@ const Hero: React.FC<HeroProps> = ({ t, lang, theme, socials }) => {
             <span className="status__dot" />
             <span style={{ whiteSpace: 'nowrap' }}>{t.hero.status}</span>
           </div>
-          <p className="hero__role">{t.hero.role}</p>
+          <p className="hero__role">
+            {t.hero.role.split(' · ').map((role, index) => (
+              <React.Fragment key={role}>
+                {index > 0 && <span className="hero__role-separator" aria-hidden="true"> · </span>}
+                <span className="hero__role-item">{role}</span>
+              </React.Fragment>
+            ))}
+          </p>
           <h1 className="hero__name">
             <span>{t.hero.first}</span>
             <span className="hero__name-last">{t.hero.last}</span>

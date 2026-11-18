@@ -68,7 +68,7 @@ const shared = {
   linkedin: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nikita-rykhlov/' },
   github: { label: 'GitHub', href: 'https://github.com/nikitaRykhlov' },
   timezone: 'UTC+04:00',
-  roleLine: 'Tech Lead · Feature Lead · Senior Backend Developer',
+  roleLine: 'AI-Native Software Engineer · Senior Backend Engineer · Tech Lead',
 };
 
 // ---------------------------------------------------------------- English copy
@@ -83,7 +83,7 @@ const en = {
     skills: 'Skills', awards: 'Honors & Awards', brand: 'Personal Brand', stack: 'Stack',
   },
   about: [
-    'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time.',
+    'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time. I use coding agents such as Codex and Claude Code while remaining hands-on with implementation, debugging and code review.',
     'Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.',
     'I enjoy sharing knowledge and best practices, which is why I actively maintain and develop a technical blog. When entrusted with a task, I take full ownership and ensure timely delivery with high efficiency and quality, regardless of the project’s scope or audience.',
   ],
@@ -272,7 +272,7 @@ const ru = {
   ...shared,
   lang: 'ru',
   domains: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы',
-  roleLine: 'Tech Lead · Feature Lead · Senior Backend Developer',
+  roleLine: 'AI-Native Software Engineer · Senior Backend Engineer · Tech Lead',
   L: {
     about: 'О себе', topSkills: 'Ключевые навыки', experience: 'Опыт работы',
     achievements: 'Ключевые достижения', responsibilities: 'Обязанности и технический вклад',
@@ -280,7 +280,7 @@ const ru = {
     skills: 'Навыки', awards: 'Награды и достижения', brand: 'Личный бренд', stack: 'Стек',
   },
   about: [
-    'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются.',
+    'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются. Использую AI-агентов, включая Codex и Claude Code, и самостоятельно пишу, отлаживаю и проверяю код.',
     'На протяжении карьеры я работал в крупных технологических компаниях с высокими стандартами, что помогло развить стратегическое мышление и способность создавать долговечные, эффективные решения. Помимо backend-разработки, у меня есть практический опыт во frontend, что позволяет подходить к проектам с full-stack перспективы.',
     'Мне нравится делиться знаниями и лучшими практиками, поэтому я активно веду технический блог. Когда мне поручают задачу, я беру на себя полную ответственность и обеспечиваю своевременную доставку с высокой эффективностью и качеством, независимо от масштаба проекта.',
   ],

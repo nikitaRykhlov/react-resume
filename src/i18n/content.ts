@@ -100,7 +100,7 @@ const en: Content = {
   ui: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Honors & Awards', education: 'Education', certifications: 'Certifications', writing: 'Writing', contact: 'Contact', responsibilities: 'Responsibilities', team: 'Team', email: 'Email', phone: 'Phone', timezone: 'Time zone', downloadCv: 'Download CV' },
   nav: { about: 'About', experience: 'Experience', skills: 'Skills', awards: 'Awards', contact: 'Contact' },
   hero: {
-    status: 'Available for new projects', role: 'Tech Lead · Back End Developer', first: 'Nikita', last: 'Rykhlov',
+    status: 'Available for new projects', role: 'AI-Native Software Engineer · Senior Backend Engineer · Tech Lead', first: 'Nikita', last: 'Rykhlov',
     tagline: 'I design and maintain high-load distributed systems where performance, reliability and fault tolerance come first.',
     mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
     domains: [
@@ -114,7 +114,7 @@ const en: Content = {
   about: {
     title: 'I build systems meant to last.',
     paras: [
-      'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads.',
+      'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads. I use coding agents such as Codex and Claude Code while remaining hands-on with implementation, debugging and code review.',
       'I care about architectures that are scalable and flexible, but also easy to support and evolve over time. Years in large technology companies with rigorous standards gave me a strategic mindset and the habit of crafting long-lasting, efficient solutions.',
       'Alongside back-end work I have hands-on front-end experience, so I approach projects full-stack. When I take ownership of a task, I deliver on time, with high quality — whatever the scope.',
     ],
@@ -255,7 +255,7 @@ const ru: Content = {
   ui: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', education: 'Образование', certifications: 'Сертификаты', writing: 'Блог', contact: 'Контакты', responsibilities: 'Обязанности', team: 'Команда', email: 'Почта', phone: 'Телефон', timezone: 'Часовой пояс', downloadCv: 'Скачать CV' },
   nav: { about: 'О себе', experience: 'Опыт', skills: 'Навыки', awards: 'Награды', contact: 'Контакты' },
   hero: {
-    status: 'Открыт к новым проектам', role: 'Tech Lead · Back End разработчик', first: 'Никита', last: 'Рыхлов',
+    status: 'Открыт к новым проектам', role: 'AI-Native Software Engineer · Senior Backend Engineer · Tech Lead', first: 'Никита', last: 'Рыхлов',
     tagline: 'Проектирую и поддерживаю высоконагруженные распределённые системы, где на первом месте производительность, надёжность и отказоустойчивость.',
     mainSkills: ['Software Architecture', 'Golang', 'Distributed Systems', 'Elasticsearch', 'PostgreSQL'],
     domains: [
@@ -269,7 +269,7 @@ const ru: Content = {
   about: {
     title: 'Создаю системы, которые живут долго.',
     paras: [
-      'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость.',
+      'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость. Использую AI-агентов, включая Codex и Claude Code, и самостоятельно пишу, отлаживаю и проверяю код.',
       'Мне важны архитектуры, которые легко масштабировать и развивать, но при этом удобно поддерживать. Годы в крупных технологических компаниях со строгими стандартами дали стратегическое мышление и привычку делать долговечные эффективные решения.',
       'Помимо backend у меня есть практика на frontend, поэтому подхожу к проектам full-stack. Когда беру задачу — довожу её в срок и с высоким качеством, независимо от масштаба.',
     ],
