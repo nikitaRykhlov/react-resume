@@ -199,6 +199,7 @@ const en: Content = {
   skills: {
     title: 'A full-stack toolkit, with a back-end core.',
     items: [
+      { name: 'Domain Expertise', desc: 'Building product systems spanning search and personalized recommendations, B2B commerce, and business process automation.', chips: ['Search & Recommendations', 'Personalization', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
       { name: 'Languages', desc: 'English and Russian — comfortable with professional communication, technical writing and documentation.', chips: ['English', 'Russian'] },
       { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
       { name: 'Search & Ranking', desc: 'Large-scale search, ranking and recommendation systems: relevance tuning, blending multiple sources into one feed, and running experiments over it.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
@@ -349,6 +350,7 @@ const ru: Content = {
   skills: {
     title: 'Full-stack-набор с backend-ядром.',
     items: [
+      { name: 'Доменная экспертиза', desc: 'Разработка продуктовых систем: от поиска и персонализированных рекомендаций до B2B-коммерции и автоматизации бизнес-процессов.', chips: ['Поиск и рекомендации', 'Персонализация', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
       { name: 'Языки', desc: 'Английский и русский — свободно для профессионального общения, технической переписки и документации.', chips: ['Английский', 'Русский'] },
       { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets'] },
       { name: 'Поиск и ранжирование', desc: 'Крупномасштабный поиск, ранжирование и рекомендации: настройка релевантности, смешивание источников в единую выдачу и эксперименты над ней.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation'] },
