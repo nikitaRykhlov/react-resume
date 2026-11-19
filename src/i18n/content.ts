@@ -109,6 +109,7 @@ const en: Content = {
       'Search, Recommendations & Personalization',
       'E-commerce & B2B Commerce',
       'Workflow Automation & Low-code Platforms',
+      'Platform Engineering & Infrastructure',
     ],
     years: '7+', yearsLabel: 'years in software', ctaPrimary: 'Get in touch', ctaSecondary: 'See experience',
     location: 'Tbilisi · UTC+04:00',
@@ -116,7 +117,7 @@ const en: Content = {
   about: {
     title: 'I build systems meant to last.',
     paras: [
-      'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads. I take an AI-native approach to software development, guiding AI agents from design through implementation and validation while owning architecture, code quality, and production reliability.',
+      'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, workflow automation and low-code platforms, as well as internal engineering platforms and infrastructure. My focus is high-load distributed systems where performance, reliability and fault tolerance are essential under intense workloads. I take an AI-native approach to software development, guiding AI agents from design through implementation and validation while owning architecture, code quality, and production reliability.',
       'I care about architectures that are scalable and flexible, but also easy to support and evolve over time. Years in large technology companies with rigorous standards gave me a strategic mindset and the habit of crafting long-lasting, efficient solutions.',
       'Alongside back-end work I have hands-on front-end experience, so I approach projects full-stack. When I take ownership of a task, I deliver on time, with high quality — whatever the scope.',
     ],
@@ -232,7 +233,7 @@ const en: Content = {
   skills: {
     title: 'A full-stack toolkit, with a back-end core.',
     items: [
-      { name: 'Domain Expertise', desc: 'Building product systems spanning search and personalized recommendations, B2B commerce, and business process automation.', chips: ['Search & Recommendations', 'Personalization', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
+      { name: 'Areas of Expertise', desc: 'Building search and recommendation systems, e-commerce products, business process automation platforms, and internal engineering platforms and infrastructure.', chips: ['Search & Recommendations', 'Personalization', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms', 'Platform Engineering & Infrastructure'] },
       { name: 'Languages', desc: 'English and Russian — comfortable with professional communication, technical writing and documentation.', chips: ['English', 'Russian'] },
       { name: 'Back End', desc: 'Reliable, high-performance backend systems: API design, databases, and service-to-service communication, with a focus on scalability and security.', chips: ['Golang', 'C#', 'Python', 'Node.js', 'PHP', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets', 'MongoDB', 'API Versioning', 'Backward Compatibility', 'Schema Evolution'] },
       { name: 'Search & Ranking', desc: 'Large-scale search, ranking and recommendation systems: relevance tuning, blending multiple sources into one feed, and running experiments over it.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation', 'Search Indexing', 'Search Query Optimization', 'Faceted Search', 'Autocomplete', 'Feature Engineering Pipelines', 'Vector Search'] },
@@ -295,6 +296,7 @@ const ru: Content = {
       'Поиск, рекомендации и персонализация',
       'Электронная коммерция и B2B',
       'Автоматизация бизнес-процессов и low-code-платформы',
+      'Платформенная инженерия и инфраструктура',
     ],
     years: '7+', yearsLabel: 'лет в разработке', ctaPrimary: 'Связаться', ctaSecondary: 'Смотреть опыт',
     location: 'Тбилиси · UTC+04:00',
@@ -302,7 +304,7 @@ const ru: Content = {
   about: {
     title: 'Создаю системы, которые живут долго.',
     paras: [
-      'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость. Использую AI-native подход к разработке: выстраиваю работу AI-агентов от проектирования до проверки реализации, отвечая за архитектуру, качество кода и надёжность решений в production.',
+      'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов, low-code-платформ, а также внутренних инженерных платформ и инфраструктуры. Мой фокус — высоконагруженные распределённые системы, где под нагрузкой критичны производительность, надёжность и отказоустойчивость. Использую AI-native подход к разработке: выстраиваю работу AI-агентов от проектирования до проверки реализации, отвечая за архитектуру, качество кода и надёжность решений в production.',
       'Мне важны архитектуры, которые легко масштабировать и развивать, но при этом удобно поддерживать. Годы в крупных технологических компаниях со строгими стандартами дали стратегическое мышление и привычку делать долговечные эффективные решения.',
       'Помимо backend у меня есть практика на frontend, поэтому подхожу к проектам full-stack. Когда беру задачу — довожу её в срок и с высоким качеством, независимо от масштаба.',
     ],
@@ -418,7 +420,7 @@ const ru: Content = {
   skills: {
     title: 'Full-stack-набор с backend-ядром.',
     items: [
-      { name: 'Доменная экспертиза', desc: 'Разработка продуктовых систем: от поиска и персонализированных рекомендаций до B2B-коммерции и автоматизации бизнес-процессов.', chips: ['Поиск и рекомендации', 'Персонализация', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms'] },
+      { name: 'Области экспертизы', desc: 'Разработка систем поиска и рекомендаций, e-commerce-продуктов, платформ автоматизации бизнес-процессов, внутренних инженерных платформ и инфраструктуры.', chips: ['Поиск и рекомендации', 'Персонализация', 'E-commerce', 'B2B Commerce', 'Workflow Automation', 'Low-code Platforms', 'Platform Engineering & Infrastructure'] },
       { name: 'Языки', desc: 'Английский и русский — свободно для профессионального общения, технической переписки и документации.', chips: ['Английский', 'Русский'] },
       { name: 'Back End', desc: 'Надёжные высокопроизводительные backend-системы: проектирование API, работа с базами и взаимодействие сервисов с упором на масштабируемость и безопасность.', chips: ['Golang', 'C#', 'Python', 'Node.js', 'PHP', 'PostgreSQL', 'Elasticsearch', 'OpenSearch', 'Redis', 'Kafka', 'S3', 'MySQL', 'REST API', 'gRPC', 'Protocol Buffers', 'OpenAPI/Swagger', 'JWT', 'OAuth 2.0', 'WebSockets', 'MongoDB', 'API Versioning', 'Backward Compatibility', 'Schema Evolution'] },
       { name: 'Поиск и ранжирование', desc: 'Крупномасштабный поиск, ранжирование и рекомендации: настройка релевантности, смешивание источников в единую выдачу и эксперименты над ней.', chips: ['Search Relevance', 'Ranking', 'Information Retrieval', 'Recommendation Systems', 'Personalization', 'Embeddings', 'A/B Testing', 'Experimentation', 'Search Indexing', 'Search Query Optimization', 'Faceted Search', 'Autocomplete', 'Feature Engineering Pipelines', 'Vector Search'] },

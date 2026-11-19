@@ -75,7 +75,7 @@ const shared = {
 const en = {
   ...shared,
   lang: 'en',
-  domains: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms',
+  domains: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms · Platform Engineering & Infrastructure',
   L: {
     about: 'About', topSkills: 'Top Skills', experience: 'Experience',
     achievements: 'Key Achievements', responsibilities: 'Responsibilities & Technical Contributions',
@@ -83,7 +83,7 @@ const en = {
     skills: 'Skills', awards: 'Honors & Awards', brand: 'Personal Brand', stack: 'Stack',
   },
   about: [
-    'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, and workflow automation and low-code platforms. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time. I take an AI-native approach to software development, guiding AI agents from design through implementation and validation while owning architecture, code quality, and production reliability.',
+    'Over 7 years of software development experience across search, recommendations and personalization, e-commerce and B2B commerce, workflow automation and low-code platforms, as well as internal engineering platforms and infrastructure. My expertise lies in designing and maintaining high-load distributed systems, where performance, reliability and fault tolerance are essential under intense workloads. I emphasize architectures that are not only scalable and flexible but also easy to support and evolve over time. I take an AI-native approach to software development, guiding AI agents from design through implementation and validation while owning architecture, code quality, and production reliability.',
     'Throughout my career I’ve worked in large technology companies known for their rigorous standards, which helped me develop a strategic mindset and the ability to craft long-lasting, efficient solutions. In addition to back-end development, I have hands-on experience in front-end technologies, allowing me to approach projects from a full-stack perspective.',
     'I enjoy sharing knowledge and best practices, which is why I actively maintain and develop a technical blog. When entrusted with a task, I take full ownership and ensure timely delivery with high efficiency and quality, regardless of the project’s scope or audience.',
   ],
@@ -255,7 +255,7 @@ const en = {
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'May 2023', tags: 'Golang, Software Development, Programming Languages' },
   ],
   skills: [
-    { label: 'Domain Expertise', items: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms' },
+    { label: 'Areas of Expertise', items: 'Search, Recommendations & Personalization · E-commerce & B2B Commerce · Workflow Automation & Low-code Platforms · Platform Engineering & Infrastructure' },
     { label: 'Languages', items: 'English (Professional working proficiency), Russian (native)' },
     { label: 'Programming Languages', items: 'Go (Golang), JavaScript, TypeScript, PHP, C#, Python, Bash' },
     { label: 'Backend Runtime', items: 'Node.js' },
@@ -302,7 +302,7 @@ const en = {
 const ru = {
   ...shared,
   lang: 'ru',
-  domains: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы',
+  domains: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы · Платформенная инженерия и инфраструктура',
   roleLine: 'AI-Native Software Engineer · Senior Backend Engineer · Tech Lead',
   L: {
     about: 'О себе', topSkills: 'Ключевые навыки', experience: 'Опыт работы',
@@ -311,7 +311,7 @@ const ru = {
     skills: 'Навыки', awards: 'Награды и достижения', brand: 'Личный бренд', stack: 'Стек',
   },
   about: [
-    'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов и low-code-платформ. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются. Использую AI-native подход к разработке: выстраиваю работу AI-агентов от проектирования до проверки реализации, отвечая за архитектуру, качество кода и надёжность решений в production.',
+    'Более 7 лет опыта в разработке ПО в области поиска, рекомендаций и персонализации, электронной и B2B-коммерции, автоматизации бизнес-процессов, low-code-платформ, а также внутренних инженерных платформ и инфраструктуры. Моя экспертиза — проектирование и поддержка высоконагруженных распределённых систем, где под интенсивными нагрузками критичны производительность, надёжность и отказоустойчивость. Делаю акцент на архитектурах, которые масштабируемы и гибки, но при этом легко поддерживаются и развиваются. Использую AI-native подход к разработке: выстраиваю работу AI-агентов от проектирования до проверки реализации, отвечая за архитектуру, качество кода и надёжность решений в production.',
     'На протяжении карьеры я работал в крупных технологических компаниях с высокими стандартами, что помогло развить стратегическое мышление и способность создавать долговечные, эффективные решения. Помимо backend-разработки, у меня есть практический опыт во frontend, что позволяет подходить к проектам с full-stack перспективы.',
     'Мне нравится делиться знаниями и лучшими практиками, поэтому я активно веду технический блог. Когда мне поручают задачу, я беру на себя полную ответственность и обеспечиваю своевременную доставку с высокой эффективностью и качеством, независимо от масштаба проекта.',
   ],
@@ -483,7 +483,7 @@ const ru = {
     { title: 'Go — The Complete Guide', href: 'https://ude.my/UC-cd6c145e-d53b-4fcc-a8b6-0339bd6cccf8/', issuer: 'Udemy', date: 'Май 2023', tags: 'Golang, Software Development, Programming Languages' },
   ],
   skills: [
-    { label: 'Доменная экспертиза', items: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы' },
+    { label: 'Области экспертизы', items: 'Поиск, рекомендации и персонализация · Электронная коммерция и B2B · Автоматизация бизнес-процессов и low-code-платформы · Платформенная инженерия и инфраструктура' },
     { label: 'Языки', items: 'Английский (Professional working proficiency), Русский (родной)' },
     { label: 'Языки программирования', items: 'Go (Golang), JavaScript, TypeScript, PHP, C#, Python, Bash' },
     { label: 'Среда выполнения backend', items: 'Node.js' },
