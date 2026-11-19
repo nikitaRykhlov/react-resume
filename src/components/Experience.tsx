@@ -49,6 +49,25 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
                         </div>
                       ))}
                     </div>}
+                    {item.summary && <p className="exp__summary">{item.summary}</p>}
+                    {item.projects?.map((project) => (
+                      <div className="exp__project" key={project.title}>
+                        <h4 className="exp__project-title">{project.title}</h4>
+                        <ul className="exp__resp-list">
+                          {project.details.map((detail) => (
+                            <li key={detail} className="exp__resp-item">
+                              <span className="exp__resp-dot" />{detail}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="exp__skills">
+                          {project.skills.map((skill) => (
+                            <span key={skill} className="chip">{skill}</span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                    {item.details.length > 0 && <>
                     <p className="exp__resp-label">{t.ui.responsibilities}</p>
                     <ul className="exp__resp-list">
                       {item.details.map((d) => (
@@ -58,6 +77,7 @@ const Experience: React.FC<{ t: Content }> = ({ t }) => {
                         </li>
                       ))}
                     </ul>
+                    </>}
                     {item.skills.length > 0 && <div className="exp__skills">
                       {item.skills.map((sk) => (
                         <span key={sk} className="chip">{sk}</span>

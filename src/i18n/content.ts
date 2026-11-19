@@ -25,6 +25,8 @@ export interface ExperienceItem {
   unit: string;
   team: string;
   highlights: Highlight[];
+  summary?: string;
+  projects?: { title: string; details: string[]; skills: string[] }[];
   details: string[];
   skills: string[];
 }
@@ -185,14 +187,45 @@ const en: Content = {
         ], skills: rbsSkills,
       },
       {
-        company: 'Freelance', role: 'Software Developer', location: 'Remote', period: 'Oct 2019 — Sep 2020', unit: '', team: '',
+        company: 'Multiple Companies or Clients', role: 'Junior Full Stack Developer', location: 'Russia, Moscow · Remote', period: 'Oct 2019 — Sep 2020', unit: '', team: '',
         highlights: [],
-        details: [
-          'Developed Telegram bots for clients.',
-          'Built websites and landing pages for clients.',
-          'Wrote scripts to automate routine tasks.',
-          'Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.',
-        ], skills: ['C#', 'Python', 'Node.js', 'HTML', 'CSS', 'Bash'],
+        details: [],
+      summary: "Developed two projects from scratch based on client specifications.",
+      projects: [
+        {
+          "title": "Julia — Flower Shop Support Bot",
+          "details": [
+            "Developed a Telegram bot for customer support requests.",
+            "Implemented functionality for store employees.",
+            "Handled project infrastructure."
+          ],
+          "skills": [
+            "Go",
+            "Telegram Bot API",
+            "Node.js"
+          ]
+        },
+        {
+          "title": "Minori — Food Delivery Web Application",
+          "details": [
+            "Developed the customer-facing interface.",
+            "Implemented a separate interface for employees.",
+            "Implemented notifications.",
+            "Implemented catalog updates.",
+            "Automated report generation.",
+            "Developed internal automation scripts.",
+            "Handled project infrastructure."
+          ],
+          "skills": [
+            "C#",
+            "Python",
+            "HTML",
+            "CSS",
+            "Bash",
+            "Nginx"
+          ]
+        }
+      ], skills: [],
       },
     ],
   },
@@ -340,14 +373,45 @@ const ru: Content = {
         ], skills: rbsSkills,
       },
       {
-        company: 'Фриланс', role: 'Разработчик', location: 'Удалённо', period: 'Окт 2019 — Сен 2020', unit: '', team: '',
+        company: 'Multiple Companies or Clients', role: 'Junior Full Stack Developer', location: 'Россия, Москва · Удалённо', period: 'Окт 2019 — Сен 2020', unit: '', team: '',
         highlights: [],
-        details: [
-          'Разрабатывал Telegram-ботов для заказчиков.',
-          'Создавал сайты и лендинги для заказчиков.',
-          'Писал скрипты для автоматизации рутинных задач.',
-          'Совмещал фриланс с обучением, закрепляя теоретические знания на практике.',
-        ], skills: ['C#', 'Python', 'Node.js', 'HTML', 'CSS', 'Bash'],
+        details: [],
+      summary: "Разработал с нуля два проекта по техническим заданиям заказчиков.",
+      projects: [
+        {
+          "title": "Julia — Telegram-бот службы поддержки цветочного магазина",
+          "details": [
+            "Разработал бота для обращений покупателей в службу поддержки.",
+            "Реализовал функциональность для сотрудников магазина.",
+            "Занимался инфраструктурой проекта."
+          ],
+          "skills": [
+            "Go",
+            "Telegram Bot API",
+            "Node.js"
+          ]
+        },
+        {
+          "title": "Minori — веб-приложение доставки еды",
+          "details": [
+            "Разработал клиентскую часть.",
+            "Реализовал отдельный интерфейс для сотрудников организации.",
+            "Реализовал систему уведомлений.",
+            "Реализовал обновление каталога.",
+            "Автоматизировал формирование отчётности.",
+            "Разработал внутренние скрипты автоматизации.",
+            "Занимался инфраструктурой проекта."
+          ],
+          "skills": [
+            "C#",
+            "Python",
+            "HTML",
+            "CSS",
+            "Bash",
+            "Nginx"
+          ]
+        }
+      ], skills: [],
       },
     ],
   },

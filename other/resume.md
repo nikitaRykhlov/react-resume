@@ -209,22 +209,35 @@ The rest of the skills can be found in [this section](#skills).
 
 *Golang, Node.js, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies*
 
-### Freelance
+### Multiple Companies or Clients
 
-**Software Developer**
+**Junior Full Stack Developer**
 
 **Oct 2019 — Sep 2020**
 
-*Remote*
+*Russia, Moscow · Remote*
 
-#### **Responsibilities**
+Developed two projects from scratch based on client specifications.
 
-- Developed Telegram bots for clients.
-- Built websites and landing pages for clients.
-- Wrote scripts to automate routine tasks.
-- Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.
+#### Julia — Flower Shop Support Bot
 
-*C#, Python, Node.js, HTML, CSS, Bash*
+- Developed a Telegram bot for customer support requests.
+- Implemented functionality for store employees.
+- Handled project infrastructure.
+
+*Go, Telegram Bot API, Node.js*
+
+#### Minori — Food Delivery Web Application
+
+- Developed the customer-facing interface.
+- Implemented a separate interface for employees.
+- Implemented notifications.
+- Implemented catalog updates.
+- Automated report generation.
+- Developed internal automation scripts.
+- Handled project infrastructure.
+
+*C#, Python, HTML, CSS, Bash, Nginx*
 
 ## Education
 

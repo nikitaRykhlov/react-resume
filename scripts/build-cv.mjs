@@ -201,16 +201,47 @@ const en = {
       stack: 'Golang, Node.js, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
     {
-      company: 'Freelance', href: '', unit: '',
-      role: 'Software Developer', period: 'Oct 2019 — Sep 2020',
-      location: 'Remote', team: '', achievements: [],
-      responsibilities: [
-        'Developed Telegram bots for clients.',
-        'Built websites and landing pages for clients.',
-        'Wrote scripts to automate routine tasks.',
-        'Combined freelance work with studies, reinforcing theoretical knowledge through practical projects.',
+      company: 'Multiple Companies or Clients', href: '', unit: '',
+      role: 'Junior Full Stack Developer', period: 'Oct 2019 — Sep 2020',
+      location: 'Russia, Moscow · Remote', team: '', achievements: [],
+      responsibilities: [],
+      summary: "Developed two projects from scratch based on client specifications.",
+      projects: [
+        {
+          "title": "Julia — Flower Shop Support Bot",
+          "details": [
+            "Developed a Telegram bot for customer support requests.",
+            "Implemented functionality for store employees.",
+            "Handled project infrastructure."
+          ],
+          "skills": [
+            "Go",
+            "Telegram Bot API",
+            "Node.js"
+          ]
+        },
+        {
+          "title": "Minori — Food Delivery Web Application",
+          "details": [
+            "Developed the customer-facing interface.",
+            "Implemented a separate interface for employees.",
+            "Implemented notifications.",
+            "Implemented catalog updates.",
+            "Automated report generation.",
+            "Developed internal automation scripts.",
+            "Handled project infrastructure."
+          ],
+          "skills": [
+            "C#",
+            "Python",
+            "HTML",
+            "CSS",
+            "Bash",
+            "Nginx"
+          ]
+        }
       ],
-      contributions: [], stack: 'C#, Python, Node.js, HTML, CSS, Bash',
+      contributions: [], stack: '',
     },
   ],
   education: {
@@ -398,16 +429,47 @@ const ru = {
       stack: 'Golang, Node.js, REST API, gRPC, Jenkins, MySQL, UML, BPMN, WebSockets, React.js, Docker, PHP, Observability, Prometheus, Grafana, Graylog, Jaeger, Full Stack Development, Web Technologies',
     },
     {
-      company: 'Фриланс', href: '', unit: '',
-      role: 'Разработчик', period: 'Окт 2019 — Сен 2020',
-      location: 'Удалённо', team: '', achievements: [],
-      responsibilities: [
-        'Разрабатывал Telegram-ботов для заказчиков.',
-        'Создавал сайты и лендинги для заказчиков.',
-        'Писал скрипты для автоматизации рутинных задач.',
-        'Совмещал фриланс с обучением, закрепляя теоретические знания на практике.',
+      company: 'Multiple Companies or Clients', href: '', unit: '',
+      role: 'Junior Full Stack Developer', period: 'Окт 2019 — Сен 2020',
+      location: 'Россия, Москва · Удалённо', team: '', achievements: [],
+      responsibilities: [],
+      summary: "Разработал с нуля два проекта по техническим заданиям заказчиков.",
+      projects: [
+        {
+          "title": "Julia — Telegram-бот службы поддержки цветочного магазина",
+          "details": [
+            "Разработал бота для обращений покупателей в службу поддержки.",
+            "Реализовал функциональность для сотрудников магазина.",
+            "Занимался инфраструктурой проекта."
+          ],
+          "skills": [
+            "Go",
+            "Telegram Bot API",
+            "Node.js"
+          ]
+        },
+        {
+          "title": "Minori — веб-приложение доставки еды",
+          "details": [
+            "Разработал клиентскую часть.",
+            "Реализовал отдельный интерфейс для сотрудников организации.",
+            "Реализовал систему уведомлений.",
+            "Реализовал обновление каталога.",
+            "Автоматизировал формирование отчётности.",
+            "Разработал внутренние скрипты автоматизации.",
+            "Занимался инфраструктурой проекта."
+          ],
+          "skills": [
+            "C#",
+            "Python",
+            "HTML",
+            "CSS",
+            "Bash",
+            "Nginx"
+          ]
+        }
       ],
-      contributions: [], stack: 'C#, Python, Node.js, HTML, CSS, Bash',
+      contributions: [], stack: '',
     },
   ],
   education: {
@@ -506,6 +568,8 @@ const css = `
   ul{list-style-type:"\\2022  ";padding-left:11px}
   li{margin-bottom:2.5px;padding-left:2px;break-inside:avoid}
   li::marker{color:#14B8A6;font-size:.62em}
+  .project{margin-top:12px}
+  .project__title{font-size:10pt;margin:0 0 5px;break-after:avoid}
   .stack{margin-top:6px;font-size:8.6pt;color:#64748B;font-style:italic;line-height:1.4}
   .edu__row,.cert,.award{break-inside:avoid;margin-bottom:8px}
   .row__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
@@ -564,6 +628,12 @@ function render(d) {
       <div class="job__role">${inline(j.role)}</div>
       <div class="job__meta">${inline(j.location)}${j.team ? ` · ${d.L.team}: ${inline(j.team)}` : ''}</div>
       </div>
+      ${j.summary ? `<p>${inline(j.summary)}</p>` : ''}
+      ${(j.projects || []).map((project) => `<div class="project">
+        <h3 class="project__title">${inline(project.title)}</h3>
+        <ul>${project.details.map((detail) => `<li>${inline(detail)}</li>`).join('')}</ul>
+        <div class="stack"><b>${d.L.stack}:</b> ${project.skills.map(inline).join(', ')}</div>
+      </div>`).join('')}
       ${list(d.L.achievements, j.achievements)}
       ${list(d.L.responsibilities, [...j.responsibilities, ...j.contributions])}
       ${j.stack ? `<div class="stack"><b>${d.L.stack}:</b> ${inline(j.stack)}</div>` : ''}

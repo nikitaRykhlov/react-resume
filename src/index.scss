@@ -635,6 +635,19 @@ main { position: relative; z-index: 2; }
   line-height: 1.55;
   color: var(--text-body);
 }
+.exp__summary {
+  margin: 26px 0 24px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.exp__project + .exp__project { margin-top: 28px; }
+.exp__project-title {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .exp__resp-label {
   margin: 26px 0 12px;
   font-family: var(--font-mono);
